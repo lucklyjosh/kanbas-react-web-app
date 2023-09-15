@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .button-container {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .button-container button {
+            display: inline-block;
+        }
+
+        .column {
+            float: left;
+        }
+
+        /* Set width length for the left, right and middle columns */
+        .part-1 {
+            width: 10%;
+        }
+
+        .part-2 {
+            width: 10%;
+        }
+
+        .part-3 {
+            width: 80%;
+        }
+
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="column part-1">
+            <ul>
+                <li><a href="account.html">Account</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Commons</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
+        <div class="column part-2">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">Modules</a></li>
+                <li><a href="#">Piazza</a></li>
+                <li><a href="#">Zoom Meetings</a></li>
+                <li><a href="assignments/index.html">Assignments</a></li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a href="grades.html">Grades</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Panopto Video</a></li>
+                <li><a href="#">Discussions</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="#">Rubrics</a></li>
+                <li><a href="#">Outcomes</a></li>
+                <li><a href="#">Collaborations</a></li>
+                <li><a href="#">Syllabus</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+        <div class="column part-3">
+            <select name="pets" id="pet-select">
+                <option value="">Gradebook</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+            </select>
+            <button>Import</button>
+            <select name="pets" id="pet-select">
+                <option value="">Export</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+            </select>
+            <button>Configure</button>
+            <h2>
+                Student Names
+            </h2>
+            <form id="text-fields">
+                <label for="text-fields-student"></label>
+                <input id="text-fields-student" placeholder="Search Students" /><br />
+            </form>
+            <h2>
+                Assginment Names
+            </h2>
+            <form id="text-fields">
+                <label for="text-fields-Assignments"></label>
+                <input id="text-fields-Assignments" placeholder="Search Assignments" /><br />
+            </form>
+            <p>
+                <button>Apply Filters</button>
+            </p>
+            <table border="1" cellspacing="0" width="40%">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>A1 SETUP Out of 100</th>
+                        <th>A2 SETUP Out of 100</th>
+                        <th>A3 SETUP Out of 100</th>
+                        <th>A4 SETUP Out of 100</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="center" valign="middle">Josh Hou</td>
+                        <td align="center" valign="middle"><input type="grades" value="99" style="text-align:center;"
+                                size="2"></td>
+                        <td align="center" valign="middle">88</td>
+                        <td align="center" valign="middle">97</td>
+                        <td align="center" valign="middle">82</td>
+                    </tr>
+                    <tr>
+                        <td align="center" valign="middle">Alex Lee</td>
+                        <td align="center" valign="middle">83</td>
+                        <td align="center" valign="middle">80</td>
+                        <td align="center" valign="middle"><input type="grades" value="92" style="text-align:center;"
+                                size="2"></td>
+                        <td align="center" valign="middle">80</td>
+                    </tr>
+                    <tr>
+                        <td align="center" valign="middle">John Wick</td>
+                        <td align="center" valign="middle">81</td>
+                        <td align="center" valign="middle">81</td>
+                        <td align="center" valign="middle">95</td>
+                        <td align="center" valign="middle"><input type="grades" value="96" style="text-align:center;"
+                                size="2"></td>
+                    </tr>
+                    <tr>
+                        <td align="center" valign="middle">Thomas Cruise</td>
+                        <td align="center" valign="middle">98</td>
+                        <td align="center" valign="middle"><input type="grades" value="85" style="text-align:center;"
+                                size="2"></td>
+                        <td align="center" valign="middle">95</td>
+                        <td align="center" valign="middle">90</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

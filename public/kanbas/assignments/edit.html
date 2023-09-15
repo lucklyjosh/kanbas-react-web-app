@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .button-container {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .button-container button {
+            display: inline-block;
+        }
+
+        .column {
+            float: left;
+        }
+
+        /* Set width length for the left, right and middle columns */
+        .part-1 {
+            width: 10%;
+        }
+
+        .part-2 {
+            width: 10%;
+        }
+
+        .part-3 {
+            width: 80%;
+        }
+
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .container {
+            display: inline-block;
+        }
+
+        .divider {
+            width: 100%;
+            border-bottom: 1px solid #000;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+        }
+
+        .row span {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="column part-1">
+            <ul>
+                <li><a href="../account.html">Account</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="../course.html">Courses</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Commons</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
+        <div class="column part-2">
+            <ul>
+                <li><a href="..\home.html">Home</a></li>
+                <li><a href="#">Modules</a></li>
+                <li><a href="#">Piazza</a></li>
+                <li><a href="#">Zoom Meetings</a></li>
+                <li><a href="assignments.html">Assignments</a></li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a href="grades.html">Grades</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Panopto Video</a></li>
+                <li><a href="#">Discussions</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="#">Rubrics</a></li>
+                <li><a href="#">Outcomes</a></li>
+                <li><a href="#">Collaborations</a></li>
+                <li><a href="#">Syllabus</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+        <div class="column part-3">
+            <div class="container">
+
+                <div style="display: inline-block;">
+                    <select name="Edit" id="Edit-select">
+                        <option value="Edit">SpeedGrader</option>
+                    </select>
+                </div>
+                <div class="divider">
+
+                </div>
+            </div>
+
+            <h2>
+                Assignment name
+            </h2>
+
+            <form id="text-fields">
+                <label for="text-fields-bat"></label>
+                <input id="text-fields-bar" placeholder="A1 - ENV + HTML" /><br />
+            </form>
+
+            <form id="text-fields">
+                <label for="text-fields-Assignments"></label>
+                <input id="text-fields-Assignments" placeholder="This is the assignment description" /><br />
+            </form>
+
+            <p>
+            <div style="margin:0; padding:0;">
+                <div style="margin:0; padding:0;">Points</div>
+                <form id="text-fields">
+                    <label for="text-fields-Points"></label>
+                    <input id="text-fields-Points" placeholder="100" /><br />
+                </form>
+            </div>
+            </p>
+
+            <p>
+            <div style="margin:0; padding:0;">
+                <div style="margin:0; padding:0;">Assignment Group</div>
+                <select style="margin:0; padding:0;">
+                    <option>ASSIGNMENTS</option>
+                    <option>ASSIGNMENTS</option>
+                </select>
+            </div>
+            </p>
+
+
+            <p>
+            <div style="margin:0; padding:0;">
+                <div style="margin:0; padding:0;">Display Grade as</div>
+                <select style="margin:0; padding:0;">
+                    <option>Percentage</option>
+                    <option>Percentage</option>
+                </select>
+            </div>
+            </p>
+
+            <p>
+            <div style="margin:0; padding:0;">
+                <div style="margin:0; padding:0;">Submission Type</div>
+                <select style="margin:0; padding:0;">
+                    <option>Online</option>
+                </select>
+            </div>
+            </p>
+            <p>
+                <label>Online Entry Options</label>
+                <br />
+                <input type="checkbox" value="Text Entry" name="check-genre" id="chkbox-Text Entry" />
+                <label for="chkbox-Text Entry">Text Entry</label> <br />
+
+                <input type="checkbox" value="Website URL" name="check-genre" id="chkbox-Website URL" />
+                <label for="chkbox-Website URL">Website URL</label> <br />
+
+                <input type="checkbox" value="Media Recordings" name="check-genre" id="chkbox-Media Recordings" />
+                <label for="chkbox-Media Recordings">Science Fiction</label> <br />
+
+                <input type="checkbox" value="Student Annotation" name="check-genre" id="chkbox-Student Annotation" />
+                <label for="chkbox-Student Annotation">Student Annotation</label>
+
+                <input type="checkbox" value="File Uploads" name="check-genre" id="chkbox-File Uploads" />
+                <label for="chkbox-File Uploads">File Uploads</label>
+            </p>
+            <p>
+            <div style="margin:0; padding:0;">
+                <div style="margin:0; padding:0;">Submission Attemts</div>
+                <select style="margin:0; padding:0;">
+                    <option>Unlimited</option>
+                </select>
+            </div>
+            </p>
+
+            <p>
+                <label>Group Assignment</label>
+                <br />
+                <input type="checkbox" value="assignment" name="check-genre" id="chkbox-assignment" />
+                <label for="chkbox-assignment">This is a group assignment</label><br />
+            </p>
+
+            <div>
+                <label>Assign</label>
+            </div>
+            <div>
+                <label>Assign to</label>
+
+                <form id="text-fields">
+                    <label for="text-fields-Assign"></label>
+                    <input id="text-fields-Assign" placeholder="Everyone" /><br />
+                </form>
+            </div>
+
+            <p>
+                <label>Due</label>
+                <br /> <input type="date" id="start" name="trip-start" value="01/01/2021" min="01/01/2021"
+                    max="01/01/2021" /> <br />
+            </p>
+
+            <p>
+                <label>Until</label>
+                <br /> <input type="date" id="start" name="trip-start" value="01/01/2021" min="01/01/2021"
+                    max="01/01/2021" /> <br />
+            </p>
+
+            <p>
+                <form action="index.html">
+                    <input type="submit" value="Cancel" />
+                </form>
+                <form action="index.html">
+                    <input type="submit" value="Save" />
+                </form>
+            </p>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

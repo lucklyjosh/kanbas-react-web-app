@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .button-container {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .button-container button {
+            display: inline-block;
+        }
+
+        .column {
+            float: left;
+        }
+
+        /* Set width length for the left, right and middle columns */
+        .part-1 {
+            width: 10%;
+        }
+
+        .part-2 {
+            width: 10%;
+        }
+
+        .part-3 {
+            width: 80%;
+        }
+
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .container {
+            display: inline-block;
+        }
+
+        .divider {
+            width: 100%;
+            border-bottom: 1px solid #000;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+        }
+
+        .row span {
+            display: block;
+        }
+
+        .input-container {
+            display: inline-block;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        .arrow {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 24px;
+            margin: 0 10px;
+        }
+    </style>
+    <!-- icon script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="column part-1">
+            <ul>
+                <li><a href="../account.html">Account</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="../course.html">Courses</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Commons</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
+        <div class="column part-2">
+            <ul>
+                <li><a href="..\home.html">Home</a></li>
+                <li><a href="#">Notifications</a></li>
+                <li><a href="index.html">Profile</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="../settings.html">Settings</a></li>
+                <li><a href="#">ePortfolios</a></li>
+                <li><a href="#">Shared Content</a></li>
+                <li><a href="#">The Hub</a></li>
+                <li><a href="#">Qwickly Course Tools</a></li>
+                <li><a href="#">Global Announcements</a></li>
+
+            </ul>
+        </div>
+        <div class="column part-3">
+            <h2>Chongjie Wen</h2>
+
+            <label for="name">Name:*</label> <input type="text" id="name" style="width: 150px;">
+            <label for="pronouns-select">Pronouns:</label>
+            <select name="pronouns" id="pronouns">
+                <option value="None">None</option>
+            </select>
+            <br><br>
+            <label for="title">Title:</label> <input type="text" id="title" style="width: 150px;">
+            <h3>
+                Contact
+            </h3>
+            <p>
+                No registered services, you can add some on the <a href="settings.html">settings</a> page.
+            </p>
+            <h3>
+                Contact
+            </h3>
+            <p>
+                No registered services, you can add some on the <a href="settings.html">settings</a> page.
+            </p>
+            <h3>
+                Biography
+            </h3>
+            <p>
+            <div style="margin:0; padding:0;">
+                <div style="margin:0; padding:0;">Faculty, Software Engineer, AI, Space, and renewables enthusiast.
+                </div>
+                <textarea id="story" name="story" rows="5" cols="33">Faculty, Software Engineer, AI, Space, and renewables enthusiast.
+                    </textarea>
+            </div>
+            </p>
+            <h3>
+                Links
+            </h3>
+            <ul>
+                <li>
+                    <a href="https://www.youtube.com/">Youtube</a> <i class="fa fa-external-link"></i> Links to an
+                    external
+                    site.
+                </li>
+            </ul>
+            <div class="input-container">
+                <div>Title</div>
+                <input type="text" id="titleInput" placeholder="Title">
+            </div>
+            <div class="arrow">→</div>
+            <div class="input-container">
+                <div>URL</div>
+                <input type="text" id="urlInput" placeholder="URL">
+
+            </div>
+            <a href="remove">Remove</a>
+            <div><button>Add another link</button></div>
+            <div><a href="index.html"><button>Cancel</button></a>
+                <a href="index.html"><button>Save Profile</button></a>
+            </div>
+            <div><a href="index.html"><button>Edit Profile</button></a>
+                <a href="index.html"><button>Cancel Editing</button></a>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+    </div>
+
+</body>
+
+</html>

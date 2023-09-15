@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .button-container {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .button-container button {
+            display: inline-block;
+        }
+
+        .column {
+            float: left;
+        }
+
+        /* Set width length for the left, right and middle columns */
+        .part-1 {
+            width: 10%;
+        }
+
+        .part-2 {
+            width: 10%;
+        }
+
+        .part-3 {
+            width: 80%;
+        }
+
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .container {
+            display: inline-block;
+        }
+
+        .divider {
+            width: 100%;
+            border-bottom: 1px solid #000;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+        }
+
+        .row span {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="column part-1">
+            <ul>
+                <li><a href="../account.html">Account</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="../course.html">Courses</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Commons</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
+        <div class="column part-2">
+            <ul>
+                <li><a href="..\home.html">Home</a></li>
+                <li><a href="#">Modules</a></li>
+                <li><a href="#">Piazza</a></li>
+                <li><a href="#">Zoom Meetings</a></li>
+                <li><a href="index.html">Assignments</a></li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a href="..\grades.html">Grades</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Panopto Video</a></li>
+                <li><a href="#">Discussions</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="#">Rubrics</a></li>
+                <li><a href="#">Outcomes</a></li>
+                <li><a href="#">Collaborations</a></li>
+                <li><a href="#">Syllabus</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+        <div class="column part-3">
+            <div class="container">
+                <div style="display: inline-block;">
+
+                    <form id="text-fields">
+                        <label for="text-fields-Assignments"></label>
+                        <input id="text-fields-Assignments" placeholder="Search for Assignments" /><br />
+                    </form>
+                </div>
+
+                <div style="display: inline-block;">
+                    <button>Group</button>
+                    <button>Assignment</button>
+                    <select name="Edit" id="Edit-select">
+                        <option value="Edit">Edit Assignment Dates</option>
+                    </select>
+                </div>
+                <div class="divider">
+
+                </div>
+            </div>
+
+            <h2>
+                ASSIGNMENTS 40% of Total
+                <select name="Edit" id="Edit-select">
+                    <option value="Edit">Edit</option>
+                    <option value="Speed Grader">Speed Grader</option>
+                    <option value="Duplicate">Duplicate</option>
+                    <option value="Delete">Delete</option>
+                    <option value="Move To...">Move To...</option>
+                    <option value="Send To...">Send To...</option>
+                    <option value="Copy To...">Copy To...</option>
+                    <option value="Share to Commons">Share to Commons</option>
+                </select>
+            </h2>
+            <ul>
+                <li class="row">
+                    <span><a href="edit.html">A1 - ENV + HTML</a></span>
+                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
+                </li>
+                <li class="row">
+                    <span><a href="edit.html">A2 - CSS + BOOTSTARAP</a></span>
+                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
+                </li>
+                <li class="row">
+                    <span><a href="edit.html">A3 - JS + REACT</a></span>
+                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
+                </li>
+                <li class="row">
+                    <span><a href="edit.html">A4 - STATE + REDUX</a></span>
+                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
+                </li>
+                <li class="row">
+                    <span><a href="edit.html">A5 - NODE + SESSION</a></span>
+                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
+                </li>
+                <li class="row">
+                    <span><a href="edit.html">A6 - MONGO + MONGOOSE</a></span>
+                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
+                </li>
+            </ul>
+
+            <h2>
+                QUIZZES 10% of Total
+                <select name="Edit" id="Edit-select">
+                    <option value="Edit">Edit</option>
+                    <option value="Speed Grader">Speed Grader</option>
+                    <option value="Duplicate">Duplicate</option>
+                    <option value="Delete">Delete</option>
+                    <option value="Move To...">Move To...</option>
+                    <option value="Send To...">Send To...</option>
+                    <option value="Copy To...">Copy To...</option>
+                    <option value="Share to Commons">Share to Commons</option>
+                </select>
+            </h2>
+            <ul>
+                <li class="row">
+                    <span><a href="#">Q1 - HTML</a></span>
+                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
+                </li>
+                <li class="row">
+                    <span><a href="#">Q2 - CSS</a></span>
+                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
+                </li>
+                <li class="row">
+                    <span><a href="#">Q3 - JS, ES6</a></span>
+                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
+                </li>
+                <li class="row">
+                    <span><a href="#">Q4 - NODE</a></span>
+                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
+                </li>
+                <li class="row">
+                    <span><a href="#">Q5 - MONGO</a></span>
+                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
+                </li>
+            </ul>
+            <h2>
+                EXAM 20% of Total
+                <select name="Edit" id="Edit-select">
+                    <option value="Edit">Edit</option>
+                    <option value="Speed Grader">Speed Grader</option>
+                    <option value="Duplicate">Duplicate</option>
+                    <option value="Delete">Delete</option>
+                    <option value="Move To...">Move To...</option>
+                    <option value="Send To...">Send To...</option>
+                    <option value="Copy To...">Copy To...</option>
+                    <option value="Share to Commons">Share to Commons</option>
+                </select>
+            </h2>
+            <ul>
+                <li class="row">
+                    <span><a href="#">Midterm</a></span>
+                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
+                </li>
+                <li class="row">
+                    <span><a href="#">Final</a></span>
+                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
+                </li>
+            </ul>
+            <h2>
+                PROJECT 30% of Total
+                <select name="Edit" id="Edit-select">
+                    <option value="Edit">Edit</option>
+                    <option value="Speed Grader">Speed Grader</option>
+                    <option value="Duplicate">Duplicate</option>
+                    <option value="Delete">Delete</option>
+                    <option value="Move To...">Move To...</option>
+                    <option value="Send To...">Send To...</option>
+                    <option value="Copy To...">Copy To...</option>
+                    <option value="Share to Commons">Share to Commons</option>
+                </select>
+            </h2>
+            <ul>
+                <li class="row">
+                    <span><a href="#">Project</a></span>
+                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
+                </li>
+
+            </ul>
+
+
+
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

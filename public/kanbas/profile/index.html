@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .button-container {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .button-container button {
+            display: inline-block;
+        }
+
+        .column {
+            float: left;
+        }
+
+        /* Set width length for the left, right and middle columns */
+        .part-1 {
+            width: 10%;
+        }
+
+        .part-2 {
+            width: 10%;
+        }
+
+        .part-3 {
+            width: 80%;
+        }
+
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .container {
+            display: inline-block;
+        }
+
+        .divider {
+            width: 100%;
+            border-bottom: 1px solid #000;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+        }
+
+        .row span {
+            display: block;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="column part-1">
+            <ul>
+                <li><a href="../account.html">Account</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="../course.html">Courses</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Commons</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
+        <div class="column part-2">
+            <ul>
+                <li><a href="..\home.html">Home</a></li>
+                <li><a href="#">Notifications</a></li>
+                <li><a href="edit.html">Profile</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="../settings.html">Settings</a></li>
+                <li><a href="#">ePortfolios</a></li>
+                <li><a href="#">Shared Content</a></li>
+                <li><a href="#">The Hub</a></li>
+                <li><a href="#">Qwickly Course Tools</a></li>
+                <li><a href="#">Global Announcements</a></li>
+
+            </ul>
+        </div>
+        <div class="column part-3">
+            <label for="">Chongjie Wen's Profile</label>
+            <br><br>
+            <div class="divider">
+            </div>
+            <a href="edit.html">
+                <button style="position: absolute; top: 100px; right: 500px;">
+                    <i class="fa-solid fa-pen fa-rotate-270"></i>Edit Profile
+                </button>
+            </a>
+            <h2>
+                Chongjie Wen
+            </h2>
+            <h3>
+                Contact
+            </h3>
+            <p>
+                No registered services, you can add some on the settings page.
+            </p>
+            <h3>
+                Biography
+            </h3>
+            <p>
+                Faculty, Software Engineer, AI, Space, and renewables enthusiast.
+            </p>
+            <h3>
+                Links
+            </h3>
+            <a href="https://www.youtube.com/">Youtube</a>
+        </div>
+
+
+
+
+    </div>
+    </div>
+
+</body>
+
+</html>
