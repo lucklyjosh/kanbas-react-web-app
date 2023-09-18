@@ -127,6 +127,22 @@
             background-color: #ddd;
             color: black;
         }
+
+        /* Choose Image setting */
+        input[type="file"] {
+            display: none;
+        }
+
+        .image-upload {
+            border: 1px solid #ccc;
+            display: inline-block;
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+
+        .section-content {
+            display: none;
+        }
     </style>
     <!-- icon script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
@@ -206,7 +222,11 @@
 
                         <div class="content">
                             <div id="section-1" class="content-section">
-                                <input type="file" id="imageFile" name="imageFile" accept="image/*">
+
+                                <label class="image-upload">
+                                    <input type="file" />
+                                    Choose Image
+                                </label>
                             </div>
                             <div id="section-2" class="content-section">
                                 <label>CS4550 12631 Web Development SEC 01 Fall 2023 [BOS-1-TR]</label>
@@ -423,7 +443,7 @@
                     <tr>
                         <td>Chat</td>
                     </tr>
-                
+
                 </table>
                 <table border="1" cellspacing="0" width="30%">
                     <tr>
@@ -500,7 +520,7 @@
                         <td>iClicker</td>
                     </tr>
                 </table>
-                
+
                 <button>Save</button>
 
             </div>
@@ -516,6 +536,13 @@
                     // Show the selected section
                     document.getElementById(sectionId).style.display = 'block';
                 }
+            </script>
+
+            <script>
+                // Show the default Course Details when the page loads
+                window.onload = function () {
+                    showSection('Course Details');
+                };
             </script>
         </div>
 
