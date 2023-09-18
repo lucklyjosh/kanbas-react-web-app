@@ -18,8 +18,7 @@
             float: left;
         }
 
-        /* Set width length for the left, right and middle columns, 
-        represent by part 1, 2, 3*/
+        /* Set width length */
         .part-1 {
             width: 10%;
         }
@@ -144,9 +143,7 @@
             display: none;
         }
     </style>
-    <!-- icon script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
-        crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -527,7 +524,6 @@
 
             <script>
                 function showSection(sectionId) {
-                    // Hide all sections
                     var sections = document.getElementsByClassName('section-content');
                     for (var i = 0; i < sections.length; i++) {
                         sections[i].style.display = 'none';
@@ -539,7 +535,7 @@
             </script>
 
             <script>
-                // Show the default Course Details when the page loads
+                // Show the default Course Details section when the page loads
                 window.onload = function () {
                     showSection('Course Details');
                 };
