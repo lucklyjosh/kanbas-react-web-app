@@ -18,19 +18,6 @@
             float: left;
         }
 
-        /* Set width length for the left, right and middle columns */
-        .part-1 {
-            width: 10%;
-        }
-
-        .part-2 {
-            width: 10%;
-        }
-
-        .part-3 {
-            width: 80%;
-        }
-
 
         .row:after {
             content: "";
@@ -76,105 +63,257 @@
 </head>
 
 <body>
-    <div class="row">
-        <div class="column part-1">
-            <ul>
-                <li><a href="../account.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="../course.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </div>
-        <div class="column part-2">
-            <ul>
-                <li><a href="..\home.html">Home</a></li>
-                <li><a href="#">Notifications</a></li>
-                <li><a href="index.html">Profile</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="../settings.html">Settings</a></li>
-                <li><a href="#">ePortfolios</a></li>
-                <li><a href="#">Shared Content</a></li>
-                <li><a href="#">The Hub</a></li>
-                <li><a href="#">Qwickly Course Tools</a></li>
-                <li><a href="#">Global Announcements</a></li>
+    <div>
+        <!-- link to css file -->
+        <link href="../kanbas.css" rel="stylesheet" />
+        <!-- link to bootstrap files -->
+        <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <div>
 
-            </ul>
-        </div>
-        <div class="column part-3">
-            <h2>Chongjie Wen</h2>
 
-            <label for="name">Name:*</label> <input type="text" id="name" style="width: 150px;">
-            <label for="pronouns-select">Pronouns:</label>
-            <select name="pronouns" id="pronouns">
-                <option value="None">None</option>
-            </select>
-            <br><br>
-            <label for="title">Title:</label> <input type="text" id="title" style="width: 150px;">
-            <h3>
-                Contact
-            </h3>
-            <p>
-                No registered services, you can add some on the <a href="settings.html">settings</a> page.
-            </p>
-            <h3>
-                Contact
-            </h3>
-            <p>
-                No registered services, you can add some on the <a href="settings.html">settings</a> page.
-            </p>
-            <h3>
-                Biography
-            </h3>
-            <p>
-            <div style="margin:0; padding:0;">
-                <div style="margin:0; padding:0;">Faculty, Software Engineer, AI, Space, and renewables enthusiast.
+            <!-- <div class="row"> -->
+            <div class="column part-1 custom-sidebar">
+
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a class="nav-link active" href="index.html">
+                            <i class="fas fa-2x fa-user-circle"></i>
+                            Account
+                        </a>
+                    </li>
+
+                    <li class="nav-item mb-2">
+                        <a class="nav-link" href="../dashboard.html">
+                            <i class="fas fa-2x fa-tachometer-alt mb-1" style="color: #f50000;"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link" href="../courses/index.html">
+                            <i class="fas fa-2x fa-solid fa-book" style="color: #f50000;"></i>
+                            Course
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-2x fa-solid fa-calendar-days" style="color: #f50000;"></i>
+                            Calendar
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-2x fa-solid fa-inbox" style="color: #f50000;"></i>
+                            Inbox
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-2x fa-solid fa-clock-rotate-left" style="color: #f50000;"></i>
+                            History
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-2x fa-solid fa-tv" style="color: #f50000;"></i>
+                            Studio
+                        </a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-2x fa-regular fa-comment" style="color: #f50000;"></i>
+                            Commons
+                        </a>
+                    </li>
+
+                    <li class="nav-item mb-2">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-2x fa-solid fa-question" style="color: #f50000;"></i>
+                            <br>
+                            Help
+                        </a>
+                    </li>
+            </div>
+            <div class="main-content p-4">
+                <!-- Title and Divider -->
+                <div class="mb-4">
+                    <label for="">Chongjie Wen's Profile</label>
+                    <div class="divider my-4"></div>
                 </div>
-                <textarea id="story" name="story" rows="5" cols="33">Faculty, Software Engineer, AI, Space, and renewables enthusiast.
-                    </textarea>
-            </div>
-            </p>
-            <h3>
-                Links
-            </h3>
-            <ul>
-                <li>
-                    <a href="https://www.youtube.com/">Youtube</a> <i class="fa fa-external-link"></i> Links to an
-                    external
-                    site.
-                </li>
-            </ul>
-            <div class="input-container">
-                <div>Title</div>
-                <input type="text" id="titleInput" placeholder="Title">
-            </div>
-            <div class="arrow">→</div>
-            <div class="input-container">
-                <div>URL</div>
-                <input type="text" id="urlInput" placeholder="URL">
 
-            </div>
-            <a href="remove">Remove</a>
-            <div><button>Add another link</button></div>
-            <div><a href="index.html"><button>Cancel</button></a>
-                <a href="index.html"><button>Save Profile</button></a>
-            </div>
-            <div><a href="index.html"><button>Edit Profile</button></a>
-                <a href="index.html"><button>Cancel Editing</button></a>
+                <!-- Main Content -->
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <div class="account-sidebar">
+                            <a href="#" class="account-link">Notifications</a>
+                            <a href="index.html" class="account-link ">Profile</a>
+                            <a href="#" class="account-link">Files</a>
+                            <a href="../settings.html" class="account-link">Settings</a>
+                            <a href="#" class="account-link">ePortfolios</a>
+                            <a href="#" class="account-link">Shared Content</a>
+                            <a href="#" class="account-link">The Hub</a>
+                            <a href="#" class="account-link">Qwickly Course Tools</a>
+                            <a href="#" class="account-link">Global Announcements</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-9">
+                        <div class="col-md-9">
+                            <div class="profile-section">
+                                <div class="float-end">
+                                    <a href="edit.html">
+
+                                        <button type="button" class="btn btn-secondary"
+                                            style="position: absolute; top: 100px; right: 500px;">
+                                            <i class="fa fa-pencil" aria-hidden="true"></i>Cancel Editing
+                                        </button>
+                                    </a>
+                                </div><br>
+                                <div class="profile-icon">
+                                    <i class="fas fa-6x fa-user" aria-hidden="true"></i>
+                                </div>
+                                <br>
+                                <h2>Chongjie Wen</h2>
+                                <div>
+                                    <input type="text" class="form-control" placeholder="Jose Annunziato"
+                                        aria-label="name" style="width: 300px;">
+                                </div>
+
+                                <br>
+                                <div>
+                                    <label for="pronouns-select">Pronouns:</label>
+                                </div>
+                                <div>
+                                    <select class="form-select" style="width: 200px;">
+                                        <option selected>None</option>
+                                        <option value="male">he/him</option>
+                                        <option value="female">she/her</option>
+                                    </select>
+
+                                </div>
+                                <br>
+                                <div>
+
+                                    <label for="title">Title:</label>
+                                </div>
+                                <div>
+                                    <input type="text" class="form-control" style="width: 300px;">
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="contact-section">
+                                <h3>
+                                    Contact
+                                </h3>
+                                <p>
+                                    No registered services, you can add some on the <a href="../settings.html"
+                                        style="color: #f50000;">settings</a> page.
+                                </p>
+                            </div>
+                            <br>
+
+
+                            <div class="bio-section">
+                                <h3>
+                                    Biography
+                                </h3>
+                                <p>
+                                <div style="margin:0; padding:0;">
+                                    <div style="margin:0; padding:0;">Faculty, Software Engineer, AI, Space, and
+                                        renewables
+                                        enthusiast.
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control" id="textarea1" rows="3"
+                                            style="width: 300px;"></textarea>
+                                    </div>
+                                </div>
+                                </p>
+
+                            </div>
+
+
+                            <h3>
+                                Links
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a href="https://www.youtube.com/">Youtube</a> <i class="fa fa-external-link"></i>
+                                    Links to an
+                                    external
+                                    site.
+                                </li>
+                            </ul>
+                            <div>
+                                <div class="input-container col">
+                                    <div>Title</div>
+                                    <div>
+                                        <input type="text" class="form-control" placeholder="Youtube"
+                                            style="width: 200px;">
+                                    </div>
+                                </div>
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <div class="input-container col">
+                                    <div>URL</div>
+                                    <div>
+                                        <input type="text" class="form-control" placeholder="https://www.youtube.com/"
+                                            style="width: 200px;">
+                                    </div>
+                                </div>
+                                <a href="#"><i class="fa-solid fa-xmark" style="color: #ff0000;"></i></a>
+
+
+
+                                <div>
+                                    <button type="button" class="btn btn-secondary">Add another link</button>
+                                </div>
+                                <br>
+                            </div>
+
+
+                            <div class="float-end">
+                                <a href="index.html">
+                                    <button type="button" class="btn btn-secondary">Cancel</button>
+                                </a>
+                                <a href="index.html" target="_blank">
+                                    <button type="button" class="btn btn-danger">Save Profile</button>
+                                </a>
+                            </div>
+                            <!-- <div><a href="index.html"><button>Edit Profile</button></a>
+                                <a href="index.html"><button>Cancel Editing</button></a>
+                            </div> -->
+                        </div>
+
+                    </div>
+
+
+                </div>
+
             </div>
         </div>
-
-
-
-
-
-    </div>
     </div>
 
 </body>
+<script>
+    // while click on text left black boarder shows up
+    document.addEventListener('DOMContentLoaded', function () {
+        // This code runs when the page loads
+        var selectedLink = localStorage.getItem('selectedLink');
+        if (selectedLink) {
+            var linkElement = document.querySelector(`a[href="${selectedLink}"]`);
+            if (linkElement) {
+                linkElement.classList.add('selected');
+            }
+        }
+    });
+
+    document.addEventListener('click', function (e) {
+        // This code runs when a link is clicked
+        if (e.target.tagName === 'A') {
+            localStorage.setItem('selectedLink', e.target.getAttribute('href'));
+        }
+    });
+</script>
 
 </html>

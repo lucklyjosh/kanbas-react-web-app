@@ -14,11 +14,12 @@
             display: inline-block;
         }
 
+        /* 
         .column {
             float: left;
         }
 
-        /* Set width length for the left, right and middle columns */
+
         .part-1 {
             width: 10%;
         }
@@ -29,7 +30,7 @@
 
         .part-3 {
             width: 80%;
-        }
+        } */
 
 
         .row:after {
@@ -76,21 +77,83 @@
 </head>
 
 <body>
-    <div class="row">
-        <div class="column part-1">
-            <ul>
-                <li><a href="account.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="course.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
+    <!-- link to css file -->
+    <link href="kanbas.css" rel="stylesheet" />
+    <!-- link to bootstrap files -->
+    <link href="../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <div>
+
+
+        <!-- <div class="row"> -->
+        <div class="column part-1 custom-sidebar">
+
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                    <a class="nav-link active" href="profile/index.html">
+                        <i class="fas fa-2x fa-user-circle"></i>
+                        Account
+                    </a>
+                </li>
+
+                <li class="nav-item mb-2">
+                    <a class="nav-link" href="dashboard.html">
+                        <i class="fas fa-2x fa-tachometer-alt mb-1" style="color: #f50000;"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link" href="course.html">
+                        <i class="fas fa-2x fa-solid fa-book" style="color: #f50000;"></i>
+                        Course
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-solid fa-calendar-days" style="color: #f50000;"></i>
+                        Calendar
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-solid fa-inbox" style="color: #f50000;"></i>
+                        Inbox
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-solid fa-clock-rotate-left" style="color: #f50000;"></i>
+                        History
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-solid fa-tv" style="color: #f50000;"></i>
+                        Studio
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-regular fa-comment" style="color: #f50000;"></i>
+                        Commons
+                    </a>
+                </li>
+
+                <li class="nav-item mb-2">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-solid fa-question" style="color: #f50000;"></i>
+                        <br>
+                        Help
+                    </a>
+                </li>
+
+
+
         </div>
-        <div class="column part-2">
+        <!-- Main Content -->
+        <div class="main-content p-4"> <!-- padding for some spacing -->
+            <!-- Your main content goes here. For demonstration: -->
+            <h1>Welcome to the Main Page</h1>
+            <p>This is the main content area where you can place your primary site content.</p>
             <ul>
                 <li><a href="#">Notifications</a></li>
                 <li><a href="profile/index.html">Profile</a></li>
@@ -104,13 +167,8 @@
 
             </ul>
         </div>
-        <div class="column part-3">
 
-
-
-        </div>
     </div>
-
 </body>
 
 </html>

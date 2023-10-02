@@ -1,249 +1,371 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <style>
-        .button-container {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-        .button-container button {
-            display: inline-block;
-        }
-
-        .column {
-            float: left;
-        }
-
-        /* Set width length for the left, right and middle columns */
-        .part-1 {
-            width: 10%;
-        }
-
-        .part-2 {
-            width: 10%;
-        }
-
-        .part-3 {
-            width: 80%;
-        }
-
-
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        .container {
-            display: inline-block;
-        }
-
-        .divider {
-            width: 100%;
-            border-bottom: 1px solid #000;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        input[type="text"] {
-            width: 100%;
-        }
-
-        .row span {
-            display: block;
-        }
-    </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="row">
-        <div class="column part-1">
-            <ul>
-                <li><a href="../account.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="../course.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </div>
-        <div class="column part-2">
-            <ul>
-                <li><a href="..\home.html">Home</a></li>
-                <li><a href="#">Modules</a></li>
-                <li><a href="#">Piazza</a></li>
-                <li><a href="#">Zoom Meetings</a></li>
-                <li><a href="index.html">Assignments</a></li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="..\grades.html">Grades</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Panopto Video</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Announcements</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Rubrics</a></li>
-                <li><a href="#">Outcomes</a></li>
-                <li><a href="#">Collaborations</a></li>
-                <li><a href="#">Syllabus</a></li>
-                <li><a href="#">Settings</a></li>
-            </ul>
-        </div>
-        <div class="column part-3">
-            <div class="container">
-                <div style="display: inline-block;">
+    <!-- link to css file -->
+    <link href="../kanbas.css" rel="stylesheet" />
 
-                    <form id="text-fields">
-                        <label for="text-fields-Assignments"></label>
-                        <input id="text-fields-Assignments" placeholder="Search for Assignments" /><br />
-                    </form>
-                </div>
+    <!-- link to bootstrap files -->
+    <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-                <div style="display: inline-block;">
-                    <button>Group</button>
-                    <button>Assignment</button>
-                    <select name="Edit" id="Edit-select">
-                        <option value="Edit">Edit Assignment Dates</option>
-                    </select>
-                </div>
-                <div class="divider">
+    <!-- Load jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <!-- Load Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+    <!-- Load Bootstrap JS -->
+    <script src="../../vendors/bootstrap/js/bootstrap.min.js"></script>
+
+
+    <!-- Kanbas Modal -->
+    <div class="kanbasModal" id="kanbasModal">
+        <div class="kanbasContent">
+            <button id="kanbasCloseButton" class="btn btn-danger close-btn">
+                <i class="fa fa-times"></i>
+            </button>
+            <div>
+                <div class="kanbasEmbedded">
+                    <h2><i class="fas fa-recycle" style="color: #f50000;"></i> CANVAS</h2>
+
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a class="nav-link active" href="../profile/index.html">
+                                <i class="fas fa-2x fa-user-circle"></i>
+                                Account
+                            </a>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="../../dashboard.html">
+                                <i class="fas fa-2x fa-tachometer-alt mb-1" style="color: #f50000;"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="../course.html">
+                                <i class="fas fa-2x fa-solid fa-book" style="color: #f50000;"></i>
+                                Course
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-2x fa-solid fa-calendar-days" style="color: #f50000;"></i>
+                                Calendar
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-2x fa-solid fa-inbox" style="color: #f50000;"></i>
+                                Inbox
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-2x fa-solid fa-clock-rotate-left" style="color: #f50000;"></i>
+                                History
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-2x fa-solid fa-tv" style="color: #f50000;"></i>
+                                Studio
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-2x fa-regular fa-comment" style="color: #f50000;"></i>
+                                Commons
+                            </a>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-2x fa-solid fa-question" style="color: #f50000;"></i>
+                                Help
+                            </a>
+                        </li>
                 </div>
             </div>
-
-            <h2>
-                ASSIGNMENTS 40% of Total
-                <select name="Edit" id="Edit-select">
-                    <option value="Edit">Edit</option>
-                    <option value="Speed Grader">Speed Grader</option>
-                    <option value="Duplicate">Duplicate</option>
-                    <option value="Delete">Delete</option>
-                    <option value="Move To...">Move To...</option>
-                    <option value="Send To...">Send To...</option>
-                    <option value="Copy To...">Copy To...</option>
-                    <option value="Share to Commons">Share to Commons</option>
-                </select>
-            </h2>
-            <ul>
-                <li class="row">
-                    <span><a href="edit.html">A1 - ENV + HTML</a></span>
-                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
-                </li>
-                <li class="row">
-                    <span><a href="edit.html">A2 - CSS + BOOTSTARAP</a></span>
-                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
-                </li>
-                <li class="row">
-                    <span><a href="edit.html">A3 - JS + REACT</a></span>
-                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
-                </li>
-                <li class="row">
-                    <span><a href="edit.html">A4 - STATE + REDUX</a></span>
-                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
-                </li>
-                <li class="row">
-                    <span><a href="edit.html">A5 - NODE + SESSION</a></span>
-                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
-                </li>
-                <li class="row">
-                    <span><a href="edit.html">A6 - MONGO + MONGOOSE</a></span>
-                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
-                </li>
-            </ul>
-
-            <h2>
-                QUIZZES 10% of Total
-                <select name="Edit" id="Edit-select">
-                    <option value="Edit">Edit</option>
-                    <option value="Speed Grader">Speed Grader</option>
-                    <option value="Duplicate">Duplicate</option>
-                    <option value="Delete">Delete</option>
-                    <option value="Move To...">Move To...</option>
-                    <option value="Send To...">Send To...</option>
-                    <option value="Copy To...">Copy To...</option>
-                    <option value="Share to Commons">Share to Commons</option>
-                </select>
-            </h2>
-            <ul>
-                <li class="row">
-                    <span><a href="#">Q1 - HTML</a></span>
-                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
-                </li>
-                <li class="row">
-                    <span><a href="#">Q2 - CSS</a></span>
-                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
-                </li>
-                <li class="row">
-                    <span><a href="#">Q3 - JS, ES6</a></span>
-                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
-                </li>
-                <li class="row">
-                    <span><a href="#">Q4 - NODE</a></span>
-                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
-                </li>
-                <li class="row">
-                    <span><a href="#">Q5 - MONGO</a></span>
-                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
-                </li>
-            </ul>
-            <h2>
-                EXAM 20% of Total
-                <select name="Edit" id="Edit-select">
-                    <option value="Edit">Edit</option>
-                    <option value="Speed Grader">Speed Grader</option>
-                    <option value="Duplicate">Duplicate</option>
-                    <option value="Delete">Delete</option>
-                    <option value="Move To...">Move To...</option>
-                    <option value="Send To...">Send To...</option>
-                    <option value="Copy To...">Copy To...</option>
-                    <option value="Share to Commons">Share to Commons</option>
-                </select>
-            </h2>
-            <ul>
-                <li class="row">
-                    <span><a href="#">Midterm</a></span>
-                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
-                </li>
-                <li class="row">
-                    <span><a href="#">Final</a></span>
-                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
-                </li>
-            </ul>
-            <h2>
-                PROJECT 30% of Total
-                <select name="Edit" id="Edit-select">
-                    <option value="Edit">Edit</option>
-                    <option value="Speed Grader">Speed Grader</option>
-                    <option value="Duplicate">Duplicate</option>
-                    <option value="Delete">Delete</option>
-                    <option value="Move To...">Move To...</option>
-                    <option value="Send To...">Send To...</option>
-                    <option value="Copy To...">Copy To...</option>
-                    <option value="Share to Commons">Share to Commons</option>
-                </select>
-            </h2>
-            <ul>
-                <li class="row">
-                    <span><a href="#">Project</a></span>
-                    <span><a href="#">Multiple Modules</a>| Not available yet</span>
-                </li>
-
-            </ul>
-
-
-
-
-
         </div>
     </div>
 
+    <!-- Breadcrumb navigation bar for larger screens -->
+    <div class="crumbbar container-fluid d-lg-block d-none">
+        <nav class="breadcrumb-bar" aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../courses/index.html">CS5610.11744.202310</a></li>
+
+                <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Black bar for md breakpoint or smaller -->
+    <nav class="navbar navbar-expand-md bg-dark d-flex justify-content-between d-md-none">
+        <button id="kanbasToggleButton" class="btn btn-dark d-md-none">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="btn btn-dark d-md-none dropdown-icon-position">
+            <button class="btn btn-dark float-end d-md-none" type="button" data-toggle="collapse"
+                data-target="#courseNav" aria-expanded="false">
+                <i class="fas fa-caret-down"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main content container -->
+    <div class="container-fluid mt-3">
+
+        <div class="row">
+
+            <!-- Kanbas Navigation Sidebar -->
+            <div class="col-md-2 collapse d-lg-block" id="kanbasNav">
+
+                <div>
+                    <div class="column part-1 custom-sidebar">
+
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2">
+                                <a class="nav-link active" href="../profile/index.html">
+                                    <i class="fas fa-2x fa-user-circle"></i>
+                                    Account
+                                </a>
+                            </li>
+
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="../../dashboard.html">
+                                    <i class="fas fa-2x fa-tachometer-alt mb-1" style="color: #f50000;"></i>
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="../course.html">
+                                    <i class="fas fa-2x fa-solid fa-book" style="color: #f50000;"></i>
+                                    Course
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-2x fa-solid fa-calendar-days" style="color: #f50000;"></i>
+                                    Calendar
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-2x fa-solid fa-inbox" style="color: #f50000;"></i>
+                                    Inbox
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-2x fa-solid fa-clock-rotate-left" style="color: #f50000;"></i>
+                                    History
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-2x fa-solid fa-tv" style="color: #f50000;"></i>
+                                    Studio
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-2x fa-regular fa-comment" style="color: #f50000;"></i>
+                                    Commons
+                                </a>
+                            </li>
+
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-2x fa-solid fa-question" style="color: #f50000;"></i>
+                                    <br>
+                                    Help
+                                </a>
+                            </li>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Navigation Sidebar -->
+            <div class="col-md-2 collapse d-lg-block" id="courseNav">
+                <div>
+                    <div class="account-sidebar">
+                        <a href="../courses/index.html" class="account-link">Home</a>
+                        <a href="#" class="account-link ">Modules</a>
+                        <a href="#" class="account-link">Piazza</a>
+                        <a href="#" class="account-link">Zoom Meetings</a>
+                        <a href="index.html" class="account-link active">Assignments</a>
+                        <a href="#" class="account-link">Quizzes</a>
+                        <a href="../grades.html" class="account-link">Grades</a>
+                        <a href="#" class="account-link">People</a>
+                        <a href="#" class="account-link">Panopto Video</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course's Modules -->
+            <div class="col-lg-6 col-12 p-3">
+
+                <div class="w-100">
+                    <nav class="breadcrumb-bar mb-3 pb-3" aria-label="buttons">
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <input class="form-control" type="text" placeholder="Search for Assignment"
+                                aria-label="Search for Assignment" style="width: 200px;">
+                            <div class="d-flex">
+                                <button type="button" class="btn btn-secondary mr-1">
+                                    <i class="fa fa-plus" aria-hidden="true"></i> Group</button>
+
+                                <button type="button" class="btn btn-danger mr-1">
+                                    <i class="fa fa-plus" aria-hidden="true"></i> Assignment
+                                </button>
+
+                                <button type="button" class="btn btn-secondary">
+                                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="list-group mt-5 col-12">
+                    <!-- Module Title -->
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-secondary"
+                        data-bs-toggle="collapse" data-bs-target="#collapseGroup1" aria-expanded="false"
+                        aria-controls="collapseGroup1">
+                        <i class="fa-solid fa-ellipsis-vertical icon-left"></i><i class="fa-solid fa-ellipsis-vertical"></i>
+                        <i class="fa-solid fa-caret-down ml-1 mr-1"></i>
+                        Assignments
+
+                        <div class="oval-progress icon-right mr-4">
+                            40% of total
+                        </div>
+                        
+                        <!-- icon -->
+                        <i class="fa-solid fa-ellipsis-vertical icon-right"></i>
+                    </a>
+                        
+
+                        
+
+                    <!-- Collapsible List Group Items -->
+                    <div class="collapse show" id="collapseGroup1">
+                        <a href="edit.html" class="list-group-item list-group-item-action with-border">
+                            <span class="icon-left">
+                                <i class="fa-solid fa-ellipsis-vertical"></i><i
+                                    class="fa-solid fa-ellipsis-vertical"></i>
+                            </span>
+                            <div class="content-text">
+                                <strong>A1 SETUP</strong>
+                                <div class="sub-text">Week 0 -SETUP- Week starting on Monday September 5th (9/5/2022) Module  |</div>
+                            </div>
+                            <span class="icon-right"><i class="fa-regular fa-circle-check" style="color: green;"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </a>
+                        <a href="edit.html" class="list-group-item list-group-item-action with-border">
+                            <span class="icon-left"><i class="fa-solid fa-ellipsis-vertical">
+
+                                </i><i class="fa-solid fa-ellipsis-vertical"></i>
+                            </span>
+                            <div class="content-text">
+                                <strong>A2 HTML</strong>
+                                <div class="sub-text">Week 1 -HTML- Week starting on Monday September 12th (9/12/2022) Module  |</div>
+                            </div>
+                            <span class="icon-right"><i class="fa-regular fa-circle-check" style="color: green;"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </a>
+                        <a href="edit.html" class="list-group-item list-group-item-action with-border">
+                            <span class="icon-left"><i class="fa-solid fa-ellipsis-vertical">
+
+                                </i><i class="fa-solid fa-ellipsis-vertical"></i>
+                            </span>
+                            <div class="content-text">
+                                <strong>A3 CSS</strong>
+                                <div class="sub-text">Week 2 -CSS- Week starting on Monday September 19th (9/19/2022) Module  |</div>
+                            </div>
+                            <span class="icon-right"><i class="fa-regular fa-circle-check" style="color: green;"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </a>
+                        <a href="edit.html" class="list-group-item list-group-item-action with-border">
+                            <span class="icon-left"><i class="fa-solid fa-ellipsis-vertical">
+
+                                </i><i class="fa-solid fa-ellipsis-vertical"></i>
+                            </span>
+                            <div class="content-text">
+                                <strong>A4 BOOTSTRAP</strong>
+                                <div class="sub-text">Week 3 -Bootstrap- Week starting on Monday September 26th (9/26/2022) Module  |</div>
+                            </div>
+                            <span class="icon-right"><i class="fa-regular fa-circle-check" style="color: green;"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </a>
+                        <a href="edit.html" class="list-group-item list-group-item-action with-border">
+                            <span class="icon-left"><i class="fa-solid fa-ellipsis-vertical">
+
+                                </i><i class="fa-solid fa-ellipsis-vertical"></i>
+                            </span>
+                            <div class="content-text">
+                                <strong>A5 JAVASCRIPT</strong>
+                                <div class="sub-text">Week 4 -JavaScript- Week starting on Monday October 3rd (10/3/2022) Module  |</div>
+                            </div>
+                            <span class="icon-right"><i class="fa-regular fa-circle-check" style="color: green;"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </a>
+                        <a href="edit.html" class="list-group-item list-group-item-action with-border">
+                            <span class="icon-left"><i class="fa-solid fa-ellipsis-vertical">
+
+                                </i><i class="fa-solid fa-ellipsis-vertical"></i>
+                            </span>
+                            <div class="content-text">
+                                <strong>A6 REACT</strong>
+                                <div class="sub-text">Week 5 -React- Week starting on Monday October 10th (10/10/2022) Module  |</div>
+                            </div>
+                            <span class="icon-right"><i class="fa-regular fa-circle-check" style="color: green;"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('kanbasToggleButton').addEventListener('click', function () {
+            var kanbasNav = document.getElementById('kanbasNav');
+            kanbasNav.classList.toggle('show');
+        });
+
+        document.getElementById('kanbasCloseButton').addEventListener('click', function () {
+            var kanbasNav = document.getElementById('kanbasNav');
+            kanbasNav.classList.remove('show');
+        });
+        document.getElementById('kanbasToggleButton').addEventListener('click', function () {
+            var kanbasModal = document.getElementById('kanbasModal');
+            kanbasModal.style.display = 'flex'; // Show the modal
+        });
+
+        document.getElementById('kanbasCloseButton').addEventListener('click', function () {
+            var kanbasModal = document.getElementById('kanbasModal');
+            kanbasModal.style.display = 'none'; // Hide the modal
+        });
+
+    </script>
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

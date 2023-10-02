@@ -1,238 +1,397 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <style>
-        .button-container {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-        .button-container button {
-            display: inline-block;
-        }
-
-        .column {
-            float: left;
-        }
-
-        /* Set width length for the left, right and middle columns */
-        .part-1 {
-            width: 10%;
-        }
-
-        .part-2 {
-            width: 10%;
-        }
-
-        .part-3 {
-            width: 80%;
-        }
-
-
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        .container {
-            display: inline-block;
-        }
-
-        .divider {
-            width: 100%;
-            border-bottom: 1px solid #000;
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        input[type="text"] {
-            width: 100%;
-        }
-
-        .row span {
-            display: block;
-        }
-    </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="row">
-        <div class="column part-1">
-            <ul>
-                <li><a href="../account.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="../course.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </div>
-        <div class="column part-2">
-            <ul>
-                <li><a href="..\home.html">Home</a></li>
-                <li><a href="#">Modules</a></li>
-                <li><a href="#">Piazza</a></li>
-                <li><a href="#">Zoom Meetings</a></li>
-                <li><a href="assignments.html">Assignments</a></li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="grades.html">Grades</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Panopto Video</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Announcements</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Rubrics</a></li>
-                <li><a href="#">Outcomes</a></li>
-                <li><a href="#">Collaborations</a></li>
-                <li><a href="#">Syllabus</a></li>
-                <li><a href="#">Settings</a></li>
-            </ul>
-        </div>
-        <div class="column part-3">
-            <div class="container">
+    <!-- link to css file -->
+    <link href="../kanbas.css" rel="stylesheet" />
 
-                <div style="display: inline-block;">
-                    <select name="Edit" id="Edit-select">
-                        <option value="Edit">SpeedGrader</option>
-                    </select>
-                </div>
-                <div class="divider">
+    <!-- link to bootstrap files -->
+    <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-                </div>
-            </div>
+    <!-- Load jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-            <h2>
-                Assignment name
-            </h2>
+    <!-- Load Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 
-            <form id="text-fields">
-                <label for="text-fields-bat"></label>
-                <input id="text-fields-bar" placeholder="A1 - ENV + HTML" /><br />
-            </form>
-
-            <form id="text-fields">
-                <label for="text-fields-Assignments"></label>
-                <input id="text-fields-Assignments" placeholder="This is the assignment description" /><br />
-            </form>
-
-            <p>
-            <div style="margin:0; padding:0;">
-                <div style="margin:0; padding:0;">Points</div>
-                <form id="text-fields">
-                    <label for="text-fields-Points"></label>
-                    <input id="text-fields-Points" placeholder="100" /><br />
-                </form>
-            </div>
-            </p>
-
-            <p>
-            <div style="margin:0; padding:0;">
-                <div style="margin:0; padding:0;">Assignment Group</div>
-                <select style="margin:0; padding:0;">
-                    <option>ASSIGNMENTS</option>
-                    <option>ASSIGNMENTS</option>
-                </select>
-            </div>
-            </p>
+    <!-- Load Bootstrap JS -->
+    <script src="../../vendors/bootstrap/js/bootstrap.min.js"></script>
 
 
-            <p>
-            <div style="margin:0; padding:0;">
-                <div style="margin:0; padding:0;">Display Grade as</div>
-                <select style="margin:0; padding:0;">
-                    <option>Percentage</option>
-                    <option>Percentage</option>
-                </select>
-            </div>
-            </p>
-
-            <p>
-            <div style="margin:0; padding:0;">
-                <div style="margin:0; padding:0;">Submission Type</div>
-                <select style="margin:0; padding:0;">
-                    <option>Online</option>
-                </select>
-            </div>
-            </p>
-            <p>
-                <label>Online Entry Options</label>
-                <br />
-                <input type="checkbox" value="Text Entry" name="check-genre" id="chkbox-Text Entry" />
-                <label for="chkbox-Text Entry">Text Entry</label> <br />
-
-                <input type="checkbox" value="Website URL" name="check-genre" id="chkbox-Website URL" />
-                <label for="chkbox-Website URL">Website URL</label> <br />
-
-                <input type="checkbox" value="Media Recordings" name="check-genre" id="chkbox-Media Recordings" />
-                <label for="chkbox-Media Recordings">Science Fiction</label> <br />
-
-                <input type="checkbox" value="Student Annotation" name="check-genre" id="chkbox-Student Annotation" />
-                <label for="chkbox-Student Annotation">Student Annotation</label>
-
-                <input type="checkbox" value="File Uploads" name="check-genre" id="chkbox-File Uploads" />
-                <label for="chkbox-File Uploads">File Uploads</label>
-            </p>
-            <p>
-            <div style="margin:0; padding:0;">
-                <div style="margin:0; padding:0;">Submission Attemts</div>
-                <select style="margin:0; padding:0;">
-                    <option>Unlimited</option>
-                </select>
-            </div>
-            </p>
-
-            <p>
-                <label>Group Assignment</label>
-                <br />
-                <input type="checkbox" value="assignment" name="check-genre" id="chkbox-assignment" />
-                <label for="chkbox-assignment">This is a group assignment</label><br />
-            </p>
-
+    <!-- Kanbas Modal -->
+    <div class="kanbasModal" id="kanbasModal">
+        <div class="kanbasContent">
+            <button id="kanbasCloseButton" class="btn btn-danger close-btn">
+                <i class="fa fa-times"></i>
+            </button>
             <div>
-                <label>Assign</label>
+                <div class="kanbasEmbedded">
+                    <h2><i class="fas fa-recycle" style="color: #f50000;"></i> CANVAS</h2>
+
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a class="nav-link active" href="../profile/index.html">
+                                <i class="fas fa-2x fa-user-circle"></i>
+                                Account
+                            </a>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="../../dashboard.html">
+                                <i class="fas fa-2x fa-tachometer-alt mb-1" style="color: #f50000;"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="../course.html">
+                                <i class="fas fa-2x fa-solid fa-book" style="color: #f50000;"></i>
+                                Course
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-2x fa-solid fa-calendar-days" style="color: #f50000;"></i>
+                                Calendar
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-2x fa-solid fa-inbox" style="color: #f50000;"></i>
+                                Inbox
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-2x fa-solid fa-clock-rotate-left" style="color: #f50000;"></i>
+                                History
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-2x fa-solid fa-tv" style="color: #f50000;"></i>
+                                Studio
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-2x fa-regular fa-comment" style="color: #f50000;"></i>
+                                Commons
+                            </a>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-2x fa-solid fa-question" style="color: #f50000;"></i>
+                                Help
+                            </a>
+                        </li>
+                </div>
             </div>
-            <div>
-                <label>Assign to</label>
+        </div>
+    </div>
 
-                <form id="text-fields">
-                    <label for="text-fields-Assign"></label>
-                    <input id="text-fields-Assign" placeholder="Everyone" /><br />
-                </form>
+    <!-- Breadcrumb navigation bar for larger screens -->
+    <div class="crumbbar container-fluid d-lg-block d-none">
+        <nav class="breadcrumb-bar" aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../courses/index.html">CS5610.11744.202310</a></li>
+
+                <li class="breadcrumb-item active" aria-current="page"><a href="index.html">Assignments</a></li>
+                <li class="breadcrumb-item active" aria-current="page">A1</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Black bar for md breakpoint or smaller -->
+    <nav class="navbar navbar-expand-md bg-dark d-flex justify-content-between d-md-none">
+        <button id="kanbasToggleButton" class="btn btn-dark d-md-none">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="btn btn-dark d-md-none dropdown-icon-position">
+            <button class="btn btn-dark float-end d-md-none" type="button" data-toggle="collapse"
+                data-target="#courseNav" aria-expanded="false">
+                <i class="fas fa-caret-down"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main content container -->
+    <div class="container-fluid mt-3">
+
+        <div class="row">
+
+            <!-- Kanbas Navigation Sidebar -->
+            <div class="col-md-2 collapse d-lg-block" id="kanbasNav">
+
+                <div>
+                    <div class="column part-1 custom-sidebar">
+
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2">
+                                <a class="nav-link active" href="../profile/index.html">
+                                    <i class="fas fa-2x fa-user-circle"></i>
+                                    Account
+                                </a>
+                            </li>
+
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="../../dashboard.html">
+                                    <i class="fas fa-2x fa-tachometer-alt mb-1" style="color: #f50000;"></i>
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="../course.html">
+                                    <i class="fas fa-2x fa-solid fa-book" style="color: #f50000;"></i>
+                                    Course
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-2x fa-solid fa-calendar-days" style="color: #f50000;"></i>
+                                    Calendar
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-2x fa-solid fa-inbox" style="color: #f50000;"></i>
+                                    Inbox
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-2x fa-solid fa-clock-rotate-left" style="color: #f50000;"></i>
+                                    History
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-2x fa-solid fa-tv" style="color: #f50000;"></i>
+                                    Studio
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-2x fa-regular fa-comment" style="color: #f50000;"></i>
+                                    Commons
+                                </a>
+                            </li>
+
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-2x fa-solid fa-question" style="color: #f50000;"></i>
+                                    <br>
+                                    Help
+                                </a>
+                            </li>
+                    </div>
+                </div>
             </div>
 
-            <p>
-                <label>Due</label>
-                <br /> <input type="date" id="start" name="trip-start" value="01/01/2021" min="01/01/2021"
-                    max="01/01/2021" /> <br />
-            </p>
+            <!-- Course Navigation Sidebar -->
+            <div class="col-md-2 collapse d-lg-block" id="courseNav">
+                <div>
+                    <div class="account-sidebar">
+                        <a href="../courses/index.html" class="account-link">Home</a>
+                        <a href="#" class="account-link ">Modules</a>
+                        <a href="#" class="account-link">Piazza</a>
+                        <a href="#" class="account-link">Zoom Meetings</a>
+                        <a href="index.html" class="account-link active">Assignments</a>
+                        <a href="#" class="account-link">Quizzes</a>
+                        <a href="#" class="account-link">Grades</a>
+                        <a href="#" class="account-link">People</a>
+                        <a href="#" class="account-link">Panopto Video</a>
+                    </div>
+                </div>
+            </div>
 
-            <p>
-                <label>Until</label>
-                <br /> <input type="date" id="start" name="trip-start" value="01/01/2021" min="01/01/2021"
-                    max="01/01/2021" /> <br />
-            </p>
+            <!-- Course's Modules -->
+            <div class="col-lg-6 col-12 p-3">
+                <div class="w-100 mb-4">
+                    <nav class="breadcrumb-bar" aria-label="buttons">
+                        <div class="breadcrumb justify-content-end">
+                            <button class="btn btn-secondary mr-1" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa fa-check-circle" aria-hidden="true" style="color: rgb(92, 202, 92);"></i>
+                                Published
+                            </button>
+                            <button type="button" class="btn btn-secondary">
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
 
-            <p>
-                <form action="index.html">
-                    <input type="submit" value="Cancel" />
-                </form>
-                <form action="index.html">
-                    <input type="submit" value="Save" />
-                </form>
-            </p>
+                <div class="mb-4">
+                    <label class="form-label">Assignment Name</label>
+                    <input class="form-control" placeholder="A1 - ENV + HTML">
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">Description</label>
+                    <textarea class="form-control" rows="7"></textarea>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 d-flex justify-content-end">
+                        <label class="form-label">Points</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input class="form-control mb-3" placeholder="100" style="width: 80%;">
+                    </div>
+
+                    <div class="col-md-4 d-flex justify-content-end">
+                        <label class="form-label">Assignment Group</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="form-select mb-3">
+                            <option selected>ASSIGNMENTS</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4 d-flex justify-content-end">
+                        <label class="form-label">Display Grade as</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="form-select mb-3">
+                            <option selected>Percentage</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label">Do not count this assignment towards the final grade</label>
+                        </div>
+                    </div>
+
+                    <!-- Submission Type -->
+                    <div class="col-md-4 d-flex justify-content-end">
+                        <label class="form-label">Submission Type</label>
+                    </div>
+                    <div class="col-md-8">
+
+                        <div class="custom-checkbox-container mb-3">
+                            <div class="row mb-2 ml-3 mt-1">
+                                <select class="form-select mb-3" style="width: 300px;">
+                                    <option selected>Online</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="ml-2 mb-2"><b>Online Entry Options</b></div>
+                            <div class="form-check ml-2">
+                                <input class="form-check-input" type="checkbox" id="check1">
+                                <label class="form-check-label" for="check1">Text Entry</label>
+                            </div>
+                            <div class="form-check ml-2">
+                                <input class="form-check-input" type="checkbox" id="check2">
+                                <label class="form-check-label" for="check2">Website URL</label>
+                            </div>
+                            <div class="form-check ml-2">
+                                <input class="form-check-input" type="checkbox" id="check3">
+                                <label class="form-check-label" for="check3">Media Recordings</label>
+                            </div>
+                            <div class="form-check ml-2">
+                                <input class="form-check-input" type="checkbox" id="check4">
+                                <label class="form-check-label" for="check4">Student Annotation</label>
+                            </div>
+                            <div class="form-check ml-2">
+                                <input class="form-check-input" type="checkbox" id="check5">
+                                <label class="form-check-label" for="check5">File Uploads</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Assign form -->
+                    <div class="col-md-4 d-flex justify-content-end">
+                        <label class="form-label">Assign</label>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="custom-checkbox-container mb-3">
+
+                            <div class="ml-2 mb-2"><b>Assign to</b></div>
+                            <input class="form-control mb-3">
+
+                            <div class="ml-2 mb-2"><b>Due</b></div>
+                            <input class="form-control mb-3">
+
+                            <div class="ml-2 mb-2"><b>Available from</b></div>
+                            <div class="form-group">
+                                <input type="date" class="form-control">
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-sm-6">
+                                    <label for="availableFrom" class="form-label ml-2"><b>Available from</b></label>
+                                    <input type="date" class="form-control" id="availableFrom">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="until" class="form-label ml-2"><b>Until</b></label>
+                                    <input type="date" class="form-control" id="until">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Save and Cancel buttons -->
+                    <div class="col-md-12">
+                        <div class="float-end">
+                            <a href="index.html">
+                                <button type="button" class="btn btn-secondary">Cancel</button>
+                            </a>
+                            <a href="index.html" target="_blank">
+                                <button type="button" class="btn btn-danger">Save Profile</button>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
 
 
         </div>
     </div>
+    <script>
+        document.getElementById('kanbasToggleButton').addEventListener('click', function () {
+            var kanbasNav = document.getElementById('kanbasNav');
+            kanbasNav.classList.toggle('show');
+        });
 
+        document.getElementById('kanbasCloseButton').addEventListener('click', function () {
+            var kanbasNav = document.getElementById('kanbasNav');
+            kanbasNav.classList.remove('show');
+        });
+        document.getElementById('kanbasToggleButton').addEventListener('click', function () {
+            var kanbasModal = document.getElementById('kanbasModal');
+            kanbasModal.style.display = 'flex'; // Show the modal
+        });
+
+        document.getElementById('kanbasCloseButton').addEventListener('click', function () {
+            var kanbasModal = document.getElementById('kanbasModal');
+            kanbasModal.style.display = 'none'; // Hide the modal
+        });
+
+    </script>
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

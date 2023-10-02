@@ -62,72 +62,180 @@
 </head>
 
 <body>
-    <div class="row">
-        <div class="column part-1">
-            <ul>
-                <li><a href="../account.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="../course.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </div>
-        <div class="column part-2">
-            <ul>
-                <li><a href="..\home.html">Home</a></li>
-                <li><a href="#">Notifications</a></li>
-                <li><a href="edit.html">Profile</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="../settings.html">Settings</a></li>
-                <li><a href="#">ePortfolios</a></li>
-                <li><a href="#">Shared Content</a></li>
-                <li><a href="#">The Hub</a></li>
-                <li><a href="#">Qwickly Course Tools</a></li>
-                <li><a href="#">Global Announcements</a></li>
+    <!-- link to css file -->
+    <link href="../kanbas.css" rel="stylesheet" />
+    <!-- link to bootstrap files -->
+    <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <div>
 
-            </ul>
+
+        <!-- <div class="row"> -->
+        <div class="column part-1 custom-sidebar">
+
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                    <a class="nav-link active" href="index.html">
+                        <i class="fas fa-2x fa-user-circle"></i>
+                        Account
+                    </a>
+                </li>
+
+                <li class="nav-item mb-2">
+                    <a class="nav-link" href="../dashboard.html">
+                        <i class="fas fa-2x fa-tachometer-alt mb-1" style="color: #f50000;"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link" href="../courses/index.html">
+                        <i class="fas fa-2x fa-solid fa-book" style="color: #f50000;"></i>
+                        Course
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-solid fa-calendar-days" style="color: #f50000;"></i>
+                        Calendar
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-solid fa-inbox" style="color: #f50000;"></i>
+                        Inbox
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-solid fa-clock-rotate-left" style="color: #f50000;"></i>
+                        History
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-solid fa-tv" style="color: #f50000;"></i>
+                        Studio
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-regular fa-comment" style="color: #f50000;"></i>
+                        Commons
+                    </a>
+                </li>
+
+                <li class="nav-item mb-2">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-solid fa-question" style="color: #f50000;"></i>
+                        <br>
+                        Help
+                    </a>
+                </li>
         </div>
-        <div class="column part-3">
-            <label for="">Chongjie Wen's Profile</label>
-            <br><br>
-            <div class="divider">
+
+
+
+        <div class="main-content p-4">
+            <!-- Title and Divider -->
+            <div class="mb-4">
+                <label for="">Chongjie Wen's Profile</label>
+                <div class="divider my-4"></div>
             </div>
-            <a href="edit.html">
-                <button style="position: absolute; top: 100px; right: 500px;">
-                    <i class="fa-solid fa-pen fa-rotate-270"></i>Edit Profile
-                </button>
-            </a>
-            <h2>
-                Chongjie Wen
-            </h2>
-            <h3>
-                Contact
-            </h3>
-            <p>
-                No registered services, you can add some on the settings page.
-            </p>
-            <h3>
-                Biography
-            </h3>
-            <p>
-                Faculty, Software Engineer, AI, Space, and renewables enthusiast.
-            </p>
-            <h3>
-                Links
-            </h3>
-            <a href="https://www.youtube.com/">Youtube</a>
+
+            <!-- Main Content -->
+            <div class="row">
+
+                <div class="col-md-3">
+                    <div class="account-sidebar">
+                        <a href="#" class="account-link">Notifications</a>
+                        <a href="index.html" class="account-link ">Profile</a>
+                        <a href="#" class="account-link">Files</a>
+                        <a href="../settings.html" class="account-link">Settings</a>
+                        <a href="#" class="account-link">ePortfolios</a>
+                        <a href="#" class="account-link">Shared Content</a>
+                        <a href="#" class="account-link">The Hub</a>
+                        <a href="#" class="account-link">Qwickly Course Tools</a>
+                        <a href="#" class="account-link">Global Announcements</a>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    <div class="float-end">
+                        <a href="edit.html">
+
+                            <button type="button" class="btn btn-secondary"
+                                style="position: absolute; top: 100px; right: 500px;">
+                                <i class="fa fa-pencil" aria-hidden="true"></i>Edit Profile
+                            </button>
+                        </a>
+                    </div><br>
+
+                    <!-- profile icon -->
+                    <div class="profile-section">
+                        <div class="profile-icon">
+                            <i class="fas fa-6x fa-user" aria-hidden="true"></i>
+                        </div>
+                        <br>
+                        <h2>
+                            Chongjie Wen
+                        </h2>
+                    </div>
+                    <br>
+                    <div class="contact-section">
+                        <h3>
+                            Contact
+                        </h3>
+                        <p>
+                            No registered services, you can add some on the <a href="../settings.html"
+                                style="color: #f50000;">settings</a> page.
+                        </p>
+                    </div>
+                    <br>
+                    <div class="bio-section">
+                        <h3>
+                            Biography
+                        </h3>
+                        <p>
+                            Faculty, Software Engineer, AI, Space, and renewables enthusiast.
+                        </p>
+                    </div>
+                    <br>
+                    <div class="link-section">
+                        <h3>
+                            Links
+                        </h3>
+                        <i class="fa-solid fa-link" style="color: #39588e;"></i>
+                        <a href="https://www.youtube.com/">Youtube</a>
+                    </div>
+
+                </div>
+
+
+            </div>
+
         </div>
 
-
-
-
-    </div>
     </div>
 
+    <script>
+        // while click on text left black boarder shows up
+        document.addEventListener('DOMContentLoaded', function () {
+            // This code runs when the page loads
+            var selectedLink = localStorage.getItem('selectedLink');
+            if (selectedLink) {
+                var linkElement = document.querySelector(`a[href="${selectedLink}"]`);
+                if (linkElement) {
+                    linkElement.classList.add('selected');
+                }
+            }
+        });
+
+        document.addEventListener('click', function (e) {
+            // This code runs when a link is clicked
+            if (e.target.tagName === 'A') {
+                localStorage.setItem('selectedLink', e.target.getAttribute('href'));
+            }
+        });
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- link to css file -->
+    <link href="kanbas.css" rel="stylesheet" />
+
+    <!-- link to bootstrap files -->
+    <link href="../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Load jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Load Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+    <!-- Load Bootstrap JS -->
+    <script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+
+
+    <!-- Kanbas Modal -->
+    <div class="kanbasModal" id="kanbasModal">
+        <div class="kanbasContent">
+            <button id="kanbasCloseButton" class="btn btn-danger close-btn">
+                <i class="fa fa-times"></i>
+            </button>
+            <div>
+                <div class="kanbasEmbedded">
+                    <h2><i class="fas fa-recycle" style="color: #f50000;"></i> CANVAS</h2>
+
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a class="nav-link active" href="profile/index.html">
+                                <i class="fas fa-2x fa-user-circle"></i>
+                                Account
+                            </a>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="dashboard.html">
+                                <i class="fas fa-2x fa-tachometer-alt mb-1" style="color: #f50000;"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="course.html">
+                                <i class="fas fa-2x fa-solid fa-book" style="color: #f50000;"></i>
+                                Course
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-2x fa-solid fa-calendar-days" style="color: #f50000;"></i>
+                                Calendar
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-2x fa-solid fa-inbox" style="color: #f50000;"></i>
+                                Inbox
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-2x fa-solid fa-clock-rotate-left" style="color: #f50000;"></i>
+                                History
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-2x fa-solid fa-tv" style="color: #f50000;"></i>
+                                Studio
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-2x fa-regular fa-comment" style="color: #f50000;"></i>
+                                Commons
+                            </a>
+                        </li>
+
+                        <li class="nav-item mb-2">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-2x fa-solid fa-question" style="color: #f50000;"></i>
+                                Help
+                            </a>
+                        </li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb navigation bar for larger screens -->
+    <div class="crumbbar container-fluid d-lg-block d-none">
+        <nav class="breadcrumb-bar" aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="courses/index.html">CS5610.11744.202310</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><a href="grades.html">Grades</a></li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Black bar for md breakpoint or smaller -->
+    <nav class="navbar navbar-expand-md bg-dark d-flex justify-content-between d-md-none">
+        <button id="kanbasToggleButton" class="btn btn-dark d-md-none">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="btn btn-dark d-md-none dropdown-icon-position">
+            <button class="btn btn-dark float-end d-md-none" type="button" data-toggle="collapse"
+                data-target="#courseNav" aria-expanded="false">
+                <i class="fas fa-caret-down"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main content container -->
+    <div class="container-fluid mt-3">
+
+        <div class="row">
+
+            <!-- Kanbas Navigation Sidebar -->
+            <div class="col-md-2 collapse d-lg-block" id="kanbasNav">
+
+                <div>
+                    <div class="column part-1 custom-sidebar">
+
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2">
+                                <a class="nav-link active" href="profile/index.html">
+                                    <i class="fas fa-2x fa-user-circle"></i>
+                                    Account
+                                </a>
+                            </li>
+
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="dashboard.html">
+                                    <i class="fas fa-2x fa-tachometer-alt mb-1" style="color: #f50000;"></i>
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="course.html">
+                                    <i class="fas fa-2x fa-solid fa-book" style="color: #f50000;"></i>
+                                    Course
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-2x fa-solid fa-calendar-days" style="color: #f50000;"></i>
+                                    Calendar
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-2x fa-solid fa-inbox" style="color: #f50000;"></i>
+                                    Inbox
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-2x fa-solid fa-clock-rotate-left" style="color: #f50000;"></i>
+                                    History
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-2x fa-solid fa-tv" style="color: #f50000;"></i>
+                                    Studio
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-2x fa-regular fa-comment" style="color: #f50000;"></i>
+                                    Commons
+                                </a>
+                            </li>
+
+                            <li class="nav-item mb-2">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-2x fa-solid fa-question" style="color: #f50000;"></i>
+                                    <br>
+                                    Help
+                                </a>
+                            </li>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Navigation Sidebar -->
+            <div class="col-md-2 collapse d-lg-block" id="courseNav">
+                <div>
+                    <div class="account-sidebar">
+                        <a href="courses/index.html" class="account-link">Home</a>
+                        <a href="#" class="account-link ">Modules</a>
+                        <a href="#" class="account-link">Piazza</a>
+                        <a href="#" class="account-link">Zoom Meetings</a>
+                        <a href="assignments/index.html" class="account-link">Assignments</a>
+                        <a href="#" class="account-link">Quizzes</a>
+                        <a href="grades.html" class="account-link active">Grades</a>
+                        <a href="#" class="account-link">People</a>
+                        <a href="#" class="account-link">Panopto Video</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course's Modules -->
+            <div class="col-lg-8 p-3 ml-3">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-CourseDetails-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-CourseDetails" type="button" role="tab"
+                            aria-controls="nav-CourseDetails" aria-selected="true">Course Details</button>
+
+
+                        <button class="nav-link" id="nav-Settings-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-Settings" type="button" role="tab" aria-controls="nav-Settings"
+                            aria-selected="false">Settings</button>
+
+
+                        <button class="nav-link" id="nav-Navigation-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-Navigation" type="button" role="tab" aria-controls="nav-Navigation"
+                            aria-selected="false">Navigation</button>
+
+                        <button class="nav-link" id="nav-App-tab" data-bs-toggle="tab" data-bs-target="#nav-App"
+                            type="button" role="tab" aria-controls="nav-App" aria-selected="false">App</button>
+
+                        <button class="nav-link" id="nav-Feature Options-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-Feature Options" type="button" role="tab"
+                            aria-controls="nav-Feature Options" aria-selected="false">Feature Options</button>
+
+                        <button class="nav-link" id="nav-Integrations-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-Integrations" type="button" role="tab" aria-controls="nav-Integrations"
+                            aria-selected="false">Integrations</button>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <!-- Course Details page -->
+                    <div class="tab-pane fade show active" id="nav-CourseDetails" role="tabpanel"
+                        aria-labelledby="nav-CourseDetails-tab">
+                        <div class="mt-3 mb-3">
+                            <h2>Course Details</h2>
+                        </div>
+                        <form>
+                            <!-- Name -->
+                            <div class="form-group row">
+                                <label for="courseName" class="col-md-2 col-form-label">Name:</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control-plaintext" id="courseName"
+                                        value="CS4550 12631 Web Development SEC 01 Fall 2023 [BOS-1-TR]" readonly>
+                                </div>
+                            </div>
+
+                            <!-- Course Code -->
+                            <div class="form-group row">
+                                <label for="courseCode" class="col-md-2 col-form-label">Course Code:</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control-plaintext" id="courseCode"
+                                        value="CS4550.12631.202410" readonly>
+                                </div>
+                            </div>
+
+                            <!-- Blueprint Course -->
+                            <div class="form-group row">
+                                <label for="blueprintCourse" class="col-md-2 col-form-label">Blueprint Course:</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control-plaintext" id="blueprintCourse" value="No"
+                                        readonly>
+                                </div>
+                            </div>
+
+                            <!-- Course Template -->
+                            <div class="form-group row">
+                                <label for="courseTemplate" class="col-md-2 col-form-label">Course Template:</label>
+                                <div class="col-md-8">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="courseTemplate">
+                                        <label class="form-check-label" for="courseTemplate">Enable course as a Course
+                                            Template</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Time Zone -->
+                            <div class="form-group row">
+                                <label for="timezone" class="col-md-2 col-form-label">Time Zone:</label>
+                                <div class="col-md-8">
+                                    <select id="timezone" name="timezone" class="form-select">
+                                        <option value="America/New_York">America/New_York GMT-5:00</option>
+                                        <option value="America/Chicago">America/Chicago GMT-6:00</option>
+                                        <option value="America/Denver">America/Denver GMT-7:00</option>
+                                        <option value="America/Los_Angeles">America/Los_Angeles GMT-8:00</option>
+                                        <option value="America/Anchorage">America/Anchorage GMT-9:00</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- SIS ID -->
+                            <div class="form-group row">
+                                <label for="SIS ID" class="col-md-2 col-form-label">SIS ID:</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control-plaintext" id="SIS ID"
+                                        value="CS4550.12631.202410" readonly>
+                                </div>
+                            </div>
+
+                            <!-- Subaccount -->
+                            <div class="form-group row">
+                                <label for="Subaccount" class="col-md-2 col-form-label">Subaccount:</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control-plaintext" id="Subaccount"
+                                        style="color: red;" value="CS Undergrad" readonly>
+                                </div>
+                            </div>
+
+                            <!-- Term -->
+                            <div class="form-group row">
+                                <label for="Term" class="col-md-2 col-form-label">Term:</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control-plaintext" id="Term"
+                                        value="202410_1 Fall 2023 Semester Full Term" readonly>
+                                </div>
+                            </div>
+
+                            <!-- Participation -->
+                            <div class="form-group row">
+                                <label for="Participation" class="col-md-2 col-form-label">Participation:</label>
+                                <div class="col-md-8">
+                                    <select id="term" name="timezone" class="form-select">
+                                        <option value="term">term</option>
+                                        <option value="America/Chicago">America/Chicago GMT-6:00</option>
+                                        <option value="America/Denver">America/Denver GMT-7:00</option>
+                                        <option value="America/Los_Angeles">America/Los_Angeles GMT-8:00</option>
+                                        <option value="America/Anchorage">America/Anchorage GMT-9:00</option>
+                                    </select>
+                                    <div class="mt-2">
+                                        Course participation is limited to <b>term</b> start and end dates.
+                                    </div>
+                                    <div>
+                                        <label for="availableFrom" class="form-label ml-2 mt-2"><b>Start</b></label>
+                                        <input type="date" class="form-control" id="availableFrom">
+                                    </div>
+                                    <div>
+                                        <label for="availableFrom" class="form-label ml-2 mt-2"><b>End</b></label>
+                                        <input type="date" class="form-control" id="availableFrom">
+                                    </div>
+                                    <div class="ml-3 mt-2">
+                                        <input class="form-check-input" type="checkbox" id="courseTemplate">
+                                        <label class="form-check-label" for="courseTemplate">Restrict students from
+                                            viewing course before term start
+                                            date</label>
+                                    </div>
+                                    <div class="ml-3 mt-2">
+                                        <input class="form-check-input" type="checkbox" id="courseTemplate">
+                                        <label class="form-check-label" for="courseTemplate">Restrict students from
+                                            viewing course before term end
+                                            date</label>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <!-- Default due time -->
+                            <div class="form-group row">
+                                <label for="Default due time" class="col-md-2 col-form-label">Default due time:</label>
+                                <div class="col-md-8">
+                                    <select id="term" class="form-select">
+                                        <option value="term">Account default(11:59pm)</option>
+                                        <option value="America/Chicago">America/Chicago GMT-6:00</option>
+                                        <option value="America/Denver">America/Denver GMT-7:00</option>
+                                        <option value="America/Los_Angeles">America/Los_Angeles GMT-8:00</option>
+                                        <option value="America/Anchorage">America/Anchorage GMT-9:00</option>
+                                    </select>
+                                    <div>
+                                        This influences the user interface for setting due dates. It does not chage the
+                                        time due for any existing assignments
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Language -->
+                            <div class="form-group row">
+                                <label for="Language" class="col-md-2 col-form-label">Language:</label>
+                                <div class="col-md-8">
+                                    <select id="term" class="form-select">
+                                        <option value="default">Not set(user-configurable, defaults to English)</option>
+                                        <option value="America/Chicago">America/Chicago GMT-6:00</option>
+                                        <option value="America/Denver">America/Denver GMT-7:00</option>
+                                        <option value="America/Los_Angeles">America/Los_Angeles GMT-8:00</option>
+                                        <option value="America/Anchorage">America/Anchorage GMT-9:00</option>
+                                    </select>
+                                    <div>
+                                        This will override any user/system language preferences. This only recommended
+                                        for foreign language courses
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- File Storage -->
+                            <div class="form-group row">
+                                <label for="File Storage" class="col-md-2 col-form-label">File Storage:</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control-plaintext" id="File Storage"
+                                        value="10000 megabytes" readonly>
+                                </div>
+                            </div>
+
+                            <!-- Large Course -->
+                            <div class="form-group row">
+                                <label for="Large Course" class="col-md-2 col-form-label">Large Course:</label>
+                                <div class="col-md-8">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="courseTemplate">
+                                        <label class="form-check-label" for="courseTemplate">Launch SpeedGrader Filtered
+                                            by Student Group</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Grading Scheme -->
+                            <div class="form-group row">
+                                <label for="Grading Scheme" class="col-md-2 col-form-label">Grading Scheme:</label>
+                                <div class="col-md-8">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="courseTemplate">
+                                        <label class="form-check-label" for="courseTemplate">Enable course grading
+                                            scheme</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- License -->
+                            <div class="form-group row">
+                                <label for="License" class="col-md-2 col-form-label">License:</label>
+                                <div class="col-md-8">
+                                    <select id="term" class="form-select">
+                                        <option value="default">Private(Copyrighted)</option>
+                                        <option value="America/Chicago">America/Chicago GMT-6:00</option>
+                                        <option value="America/Denver">America/Denver GMT-7:00</option>
+                                        <option value="America/Los_Angeles">America/Los_Angeles GMT-8:00</option>
+                                        <option value="America/Anchorage">America/Anchorage GMT-9:00</option>
+                                    </select>
+                                    <div>
+                                        This will override any user/system language preferences. This only recommended
+                                        for foreign language courses
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- File Copyright -->
+                            <div class="form-group row">
+                                <label for="File Copyright" class="col-md-2 col-form-label">File Copyright:</label>
+                                <div class="col-md-8">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="courseTemplate">
+                                        <label class="form-check-label" for="courseTemplate">Copyright and license
+                                            information must be provided for files
+                                            before
+                                            they are published</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Visibility -->
+                            <div class="form-group row">
+                                <label for="Visibility" class="col-md-2 col-form-label">Visibility:</label>
+                                <div class="col-md-8">
+                                    <div class="form-check">
+
+                                        <div class="mt-2 mb-2">
+                                            If you need to make your course public please contact your
+                                            administrator/support
+                                        </div>
+                                        <select id="Visibility" class="form-select">
+                                            <option value="default">Course</option>
+                                            <option value="America/Chicago">America/Chicago GMT-6:00</option>
+                                            <option value="America/Denver">America/Denver GMT-7:00</option>
+                                            <option value="America/Los_Angeles">America/Los_Angeles GMT-8:00</option>
+                                            <option value="America/Anchorage">America/Anchorage GMT-9:00</option>
+                                        </select>
+
+                                        <div class="mt-2">
+                                            <input class="form-check-input" type="checkbox" id="courseTemplate">
+                                            <label class="form-check-label" for="courseTemplate">Include this course in
+                                                the public course index</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Format -->
+                            <div class="form-group row">
+                                <label for="Format" class="col-md-2 col-form-label">Format:</label>
+                                <div class="col-md-8">
+                                    <select id="term" class="form-select">
+                                        <option value="default">On-Compus</option>
+                                        <option value="America/Chicago">America/Chicago GMT-6:00</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Mastery Paths -->
+                            <div class="form-group row">
+                                <label for="Mastery Paths" class="col-md-2 col-form-label">Mastery Paths:</label>
+                                <div class="col-md-8">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="courseTemplate">
+                                        <label class="form-check-label" for="courseTemplate">Enable individual learning
+                                            paths for students based on
+                                            assessment</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Description -->
+                            <div class="form-group row">
+                                <label for="Description" class="col-md-2 col-form-label">Description:</label>
+                                <div class="col-md-8">
+                                    <textarea class="form-control" rows="7"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Update Button -->
+                            <div class="form-group row">
+                                <div class="col-md-10">
+                                    <div class="float-end">
+                                        <a href="index.html" target="_blank">
+                                            <button type="button" class="btn btn-danger">Update Course Details</button>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="nav-Settings" role="tabpanel" aria-labelledby="nav-Settings-tab">
+
+                        ...
+                    </div>
+                    <div class="tab-pane fade" id="nav-Navigation" role="tabpanel" aria-labelledby="nav-Navigation-tab">
+
+                        <div class="mt-3 mb-3">Drag and drop items to reorder them in the course navigation.</div>
+                        <!-- Course navigation -->
+                        <div>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="content-text">
+                                        <strong>Home</strong>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="content-text">
+                                        <strong>Modules</strong>
+                                    </div>
+                                    <span class="icon-right">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </a>
+                            </div>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="content-text">
+                                        <strong>Piazza</strong>
+                                    </div>
+                                    <span class="icon-right">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </a>
+                            </div>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="content-text">
+                                        <strong>Zoom Meetings</strong>
+                                    </div>
+                                    <span class="icon-right">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </a>
+                            </div>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="content-text">
+                                        <strong>Assignments</strong>
+                                    </div>
+                                    <span class="icon-right">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </a>
+                            </div>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="content-text">
+                                        <strong>Quizzes</strong>
+                                    </div>
+                                    <span class="icon-right">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </a>
+                            </div>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="content-text">
+                                        <strong>Grades</strong>
+                                    </div>
+                                    <span class="icon-right">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </a>
+                            </div>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="content-text">
+                                        <strong>People</strong>
+                                    </div>
+                                    <span class="icon-right">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </a>
+                            </div>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="content-text">
+                                        <strong>Panopto Video</strong>
+                                    </div>
+                                    <span class="icon-right">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mt-3 mb-3">
+                            Drag items here to hide them from students
+                            <div class="sub-text">Disabling most pages will cause students who visit those pages to
+                                be redirected to the course home page.</div>
+                        </div>
+
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="content-text">
+                                    <strong>SCORM</strong>
+                                    <div class="sub-text">Page disabled, won't appear in navigation</div>
+                                </div>
+                                <span class="icon-right">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a>
+                        </div>
+
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="content-text">
+                                    <strong>Attendance</strong>
+                                    <div class="sub-text">Page disabled, won't appear in navigation</div>
+                                </div>
+                                <span class="icon-right">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a>
+                        </div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="content-text">
+                                    <strong>Barnes and Noble Bookstore</strong>
+                                    <div class="sub-text">Page disabled, won't appear in navigation</div>
+                                </div>
+                                <span class="icon-right">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a>
+                        </div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="content-text">
+                                    <strong>Digication</strong>
+                                    <div class="sub-text">Page disabled, won't appear in navigation</div>
+                                </div>
+                                <span class="icon-right">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a>
+                        </div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="content-text">
+                                    <strong>Top Hat</strong>
+                                    <div class="sub-text">Page disabled, won't appear in navigation</div>
+                                </div>
+                                <span class="icon-right">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a>
+                        </div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="content-text">
+                                    <strong>Syllabus</strong>
+                                    <div class="sub-text">Page disabled, won't appear in navigation</div>
+                                </div>
+                                <span class="icon-right">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a>
+                        </div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="content-text">
+                                    <strong>Perusall</strong>
+                                    <div class="sub-text">Page disabled, won't appear in navigation</div>
+                                </div>
+                                <span class="icon-right">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a>
+                        </div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="content-text">
+                                    <strong>Microsoft Teams Meetings</strong>
+                                    <div class="sub-text">Page disabled, won't appear in navigation</div>
+                                </div>
+                                <span class="icon-right">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a>
+                        </div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="content-text">
+                                    <strong>FACT Reporting and Photo Roster</strong>
+                                    <div class="sub-text">Page disabled, won't appear in navigation</div>
+                                </div>
+                                <span class="icon-right">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a>
+                        </div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="content-text">
+                                    <strong>Progress Reports(Navigate)</strong>
+                                    <div class="sub-text">Page disabled, won't appear in navigation</div>
+                                </div>
+                                <span class="icon-right">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a>
+                        </div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="content-text">
+                                    <strong>Microsoft Teams for Canvas</strong>
+                                    <div class="sub-text">Page disabled, won't appear in navigation</div>
+                                </div>
+                                <span class="icon-right">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a>
+                        </div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="content-text">
+                                    <strong>VHL Central</strong>
+                                    <div class="sub-text">Page disabled, won't appear in navigation</div>
+                                </div>
+                                <span class="icon-right">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a>
+                        </div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="content-text">
+                                    <strong>Gradescope 1.3</strong>
+                                    <div class="sub-text">Page disabled, won't appear in navigation</div>
+                                </div>
+                                <span class="icon-right">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a>
+                        </div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="content-text">
+                                    <strong>Credentials</strong>
+                                    <div class="sub-text">Page disabled, won't appear in navigation</div>
+                                </div>
+                                <span class="icon-right">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a>
+                        </div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="content-text">
+                                    <strong>iClicker</strong>
+                                    <div class="sub-text">Page disabled, won't appear in navigation</div>
+                                </div>
+                                <span class="icon-right">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </a>
+                        </div>
+                        <div class="mt-3">
+                            <div>
+                                <a href="index.html" target="_blank">
+                                    <button type="button" class="btn btn-danger">Save</button>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tab-pane fade" id="nav-App" role="tabpanel" aria-labelledby="nav-App-tab">
+                        ...
+                    </div>
+                    <div class="tab-pane fade" id="nav-Feature Options" role="tabpanel"
+                        aria-labelledby="nav-Feature Options-tab">
+                        ...
+                    </div>
+                    <div class="tab-pane fade" id="nav-Integrations" role="tabpanel"
+                        aria-labelledby="nav-Integrations-tab">
+                        ...
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <script>
+        document.getElementById('kanbasToggleButton').addEventListener('click', function () {
+            var kanbasNav = document.getElementById('kanbasNav');
+            kanbasNav.classList.toggle('show');
+        });
+
+        document.getElementById('kanbasCloseButton').addEventListener('click', function () {
+            var kanbasNav = document.getElementById('kanbasNav');
+            kanbasNav.classList.remove('show');
+        });
+        document.getElementById('kanbasToggleButton').addEventListener('click', function () {
+            var kanbasModal = document.getElementById('kanbasModal');
+            kanbasModal.style.display = 'flex'; // Show the modal
+        });
+
+        document.getElementById('kanbasCloseButton').addEventListener('click', function () {
+            var kanbasModal = document.getElementById('kanbasModal');
+            kanbasModal.style.display = 'none'; // Hide the modal
+        });
+
+    </script>
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
