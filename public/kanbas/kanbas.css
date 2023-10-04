@@ -80,7 +80,6 @@
 
 .account-sidebar {
     width: 190px;
-
     display: flex;
     flex-direction: column;
 }
@@ -92,7 +91,7 @@
     /* Some padding for aesthetics */
     display: block;
     /* To make the entire area clickable */
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     /* Space between the links, adjust between 15-20px as needed */
 }
 
@@ -151,7 +150,28 @@ a.selected {
     padding: 0;
     background-color: rgba(255, 255, 255, 0.5);
     border-bottom: 1px solid #777777;
+    width: 100%;
+
 }
+
+.breadcrumb-item {
+    display: inline-block; 
+    margin-right: 5px; 
+}
+
+.breadcrumb-item a {
+    text-decoration: none;  /* Removes underline */
+    color: red;  
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline; 
+}
+
+.breadcrumb-item.active a {
+    color: black;  
+}
+
 
 body,
 html {
