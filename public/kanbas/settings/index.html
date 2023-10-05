@@ -136,6 +136,13 @@
                     <div class="column part-1 custom-sidebar">
 
                         <ul class="nav flex-column">
+                            
+                            <li class="nav-item logo-container">
+                                <a class="nav-link" href="#">
+                                    <img src="../neu_logo.png" alt="Logo" class="logo">
+                                </a>
+                            </li>
+
                             <li class="nav-item mb-2">
                                 <a class="nav-link active" href="../profile/index.html">
                                     <i class="fas fa-2x fa-user-circle"></i>
@@ -264,6 +271,18 @@
                         </div>
 
                         <form>
+                            <!-- Image -->
+                            <div class="form-group row">
+                                <label for="imageUpload" class="col-md-2 col-form-label">Image:</label>
+                                <div class="col-md-8">
+                                    <div class="image-upload-box" style="width: 300px; height: 200px; border: 1px solid #d1cece; position: relative; text-align: center; line-height: 200px;">
+                                        <input type="file" id="imageUpload" style="opacity: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer;">
+                                        <button type="button" class="btn btn-light">Choose Image</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
                             <!-- Name -->
                             <div class="form-group row">
                                 <label for="courseName" class="col-md-2 col-form-label">Name:</label>

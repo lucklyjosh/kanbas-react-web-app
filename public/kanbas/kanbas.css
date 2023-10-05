@@ -155,21 +155,22 @@ a.selected {
 }
 
 .breadcrumb-item {
-    display: inline-block; 
-    margin-right: 5px; 
+    display: inline-block;
+    margin-right: 5px;
 }
 
 .breadcrumb-item a {
-    text-decoration: none;  /* Removes underline */
-    color: red;  
+    text-decoration: none;
+    /* Removes underline */
+    color: red;
 }
 
 .breadcrumb-item a:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
 .breadcrumb-item.active a {
-    color: black;  
+    color: black;
 }
 
 
@@ -271,37 +272,43 @@ html {
 }
 
 .crumbbar {
-    position: relative;  
-    left: 85px;        
-    z-index: 10;         
+    position: relative;
+    left: 85px;
+    z-index: 10;
 }
 
 /* Assignment */
 .with-border {
     position: relative;
-    padding-left: 40px !important; /* Increased the padding */
+    padding-left: 40px !important;
+    /* Increased the padding */
     border-left: 2px solid green !important;
 }
+
 .icon-left {
     position: absolute;
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
 }
+
 .content-text {
     display: inline-block;
     vertical-align: middle;
 }
+
 .sub-text {
     font-size: 0.8em;
     color: grey;
 }
+
 .icon-right {
     position: absolute;
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
 }
+
 .oval-progress {
     display: inline-block;
     padding: 8px 16px;
@@ -314,17 +321,33 @@ html {
 .custom-checkbox-container {
     border: 1px solid #ccc;
     padding: 10px;
-    border-radius: 5px;  /* Optional: for rounded borders */
+    border-radius: 5px;
+    /* Optional: for rounded borders */
 }
 
 .nav-tabs .nav-link {
-    color: red;  /* Set color for unselected tabs */
+    color: red;
+    /* Set color for unselected tabs */
 }
 
 .nav-tabs .nav-link.active {
-    color: black; /* Set color for the selected tab */
+    color: black;
+    /* Set color for the selected tab */
 }
 
 .nav-tabs .nav-link:hover {
-    color: black; /* Set color for the selected tab */
+    color: black;
+    /* Set color for the selected tab */
 }
+
+
+.logo {
+    height: 100%;  /* or the height you want */
+    width: 100%;   /* or the width you want */
+    object-fit: cover;  /* or contain, depending on your needs */
+    transition: transform 0.3s;
+}
+
+
+
+
