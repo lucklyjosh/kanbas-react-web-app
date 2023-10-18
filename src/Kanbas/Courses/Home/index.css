@@ -1,0 +1,10 @@
+.btn-left-content {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+}
+
+.wd-icon {
+    margin-right: 5px !important;
+}
+

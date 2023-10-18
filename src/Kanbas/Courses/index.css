@@ -1,0 +1,52 @@
+/* Styles for the breadcrumb navigation bar */
+.breadcrumb-bar {
+    top: 0;
+    z-index: 1000;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid #777777;
+    margin-bottom: 10px;
+    width: 100%;
+
+}
+
+.crumbbar {
+    padding: 0;
+    margin: 0;
+    width: 2000px;
+
+}
+
+
+
+
+/* Styles for each item in the breadcrumb */
+.breadcrumb-item {
+    display: inline-block;
+    align-items: center;
+    margin-right: 5px;
+}
+
+/* Styles for the links within the breadcrumb items */
+.breadcrumb-item a {
+    text-decoration: none; /* Removes the default underline */
+    color: red; /* Colors the links red */
+}
+
+/* Styles for the breadcrumb links when hovered over */
+.breadcrumb-item a:hover {
+    text-decoration: underline; /* Adds an underline when hovered */
+}
+
+/* Styles for the active breadcrumb link (current page) */
+.breadcrumb-item.active a {
+    color: black; /* Colors the active link black */
+}
+
+
+/* In your CSS file */
+.icon-style {
+    font-size: 2em;
+    margin-right: 10px;
+  }
+  

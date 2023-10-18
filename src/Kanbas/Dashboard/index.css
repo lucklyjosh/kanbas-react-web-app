@@ -1,0 +1,52 @@
+.card {
+    width: 290px;
+    height: 260px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.card-spacing {
+    margin: 20px;
+}
+
+.main-content {
+    overflow-y: auto;
+    height: 100vh;
+    padding-top: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.card-image {
+    background-color: #755d9a; /* Default color; can be replaced by an image */
+    height: 150px; /* 60% of 260px */
+    position: relative;
+}
+
+.card-body {
+    height: 104px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.card-title {
+    margin-bottom: 5px; /* Adjust as needed */
+}
+
+.card-text {
+    margin-bottom: 5px; /* Adjust as needed */
+}
+
+.card-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px; /* You can adjust this value to change the icon size */
+    z-index: 10; /* Ensure the icon stays on top of the image */
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,74 @@
+.wd-kanbas-navigation .wd-icon {
+  font-size: 2em;
+}
+
+
+.wd-kanbas-navigation .list-group-item:first-child,
+.wd-kanbas-navigation .list-group-item:last-child,
+.wd-kanbas-navigation .list-group-item.active:last-child {
+  border-radius: 0px;
+}
+
+
+.wd-kanbas-navigation {
+  background-color: black;
+  list-style: none;
+  width: 80px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+}
+
+.wd-kanbas-navigation a {
+  color: white;
+  background-color: black;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  width: 85px;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+.wd-kanbas-navigation .wd-icon {
+  color: red;
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.wd-kanbas-navigation a:hover {
+  background-color: white;
+  color: red;
+}
+
+.wd-kanbas-navigation a.active {
+  background-color: white;
+  color: red;
+}
+
+.wd-kanbas-navigation a.active .wd-icon {
+  color: red;
+}
+
+
+
+.wd-kanbas-navigation .logo-container {
+  border: none;
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 80px;
+
+}
+
+
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
