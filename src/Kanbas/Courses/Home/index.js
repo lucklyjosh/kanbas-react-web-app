@@ -10,12 +10,13 @@ import "./index.css"
 function Home() {
     return (
         <div className="row">
-            <div className="col-8">
+            <div className="col-lg-8 col-md-6 col-sm-12">
                 <h2>Home</h2>
                 
                 <ModuleList />
             </div>
-            <div className="col-3">
+            <div className="col-lg-4 col-md-6 d-none d-md-block">
+
                 <h2>Status</h2>
                 <div className="course-status">
                     <h5>Course Status</h5>

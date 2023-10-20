@@ -8,3 +8,9 @@
     margin-right: 5px !important;
 }
 
+/* This will hide the buttons when the screen width is less than or equal to 768px */
+@media only screen and (max-width: 768px) {
+    .course-status {
+        display: none;
+    }
+}

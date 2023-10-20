@@ -7,11 +7,12 @@ function ModuleList() {
   const modules = db.modules;
 
   return (
-    <div className="list-group mt-5 col-12">
+    <div className="list-group mt-5 col-lg-10 col-md-6 col-sm-12">
+
       {modules
         .filter((module) => module.course === courseId)
         .map((module, index) => (
-          <div key={index} className="list-group mt-3 col-12" style={{ width: '900px' }}>
+          <div key={index} className="list-group mt-3 col-12">
             <a href="#" className="list-group-item list-group-item-action list-group-item-secondary">
               {module.name}
               <span className="icon-right">
