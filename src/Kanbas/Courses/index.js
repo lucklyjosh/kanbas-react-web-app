@@ -12,11 +12,11 @@ import { LiaBarsSolid } from 'react-icons/lia';
 import './index.css'
 
 
-function Courses() {
+function Courses({ courses }) {
   const { courseId } = useParams();
   const { pathname } = useLocation();
-  const [empty, kanbas, courses, id, screen] = pathname.split("/");
-  const course = db.courses.find((course) => course._id === courseId);
+  const [empty, kanbas, coursesPath, id, screen] = pathname.split("/");
+  const course = courses.find((course) => course._id === courseId);
 
   return (
 
@@ -38,8 +38,6 @@ function Courses() {
           </div>
         </nav>
       </div>
-
-
 
       <CourseNavigation />
       <div>
