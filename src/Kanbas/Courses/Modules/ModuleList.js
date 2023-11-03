@@ -26,7 +26,7 @@ function ModuleList() {
               onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))}
               placeholder="Module Name"
             />
-            <Button variant="primary"  onClick={() => dispatch(setModule(module))}>
+            <Button variant="primary" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
               Add
             </Button>
             <Button variant="secondary" onClick={() => dispatch(updateModule(module))}>
@@ -36,7 +36,7 @@ function ModuleList() {
           <Form.Control
             as="textarea"
             value={module.description}
-            onChange={(e) =>  dispatch(setModule({ ...module, description: e.target.value }))}
+            onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}
             placeholder="Module Description"
           />
         </ListGroup.Item>
@@ -52,14 +52,14 @@ function ModuleList() {
                     variant="warning"
                     size="sm"
                     className="me-2"
-                    onClick={() => setModule(module)}
+                    onClick={() => dispatch(setModule(module))}
                   >
                     Edit
                   </Button>
                   <Button
                     variant="danger"
                     size="sm"
-                    onClick={() => deleteModule(module._id)}
+                    onClick={() => dispatch(deleteModule(module._id))}
                   >
                     Delete
                   </Button>
