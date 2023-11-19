@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, Routes, Route, Navigate, useLocation, Link } from "react-router-dom";
-import JsonPre from "../../Labs/a3/JsonPre";
-import db from "../Database";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
 import Home from "./Home";
@@ -12,11 +12,22 @@ import { LiaBarsSolid } from 'react-icons/lia';
 import './index.css'
 
 
-function Courses({ courses }) {
+function Courses() {
   const { courseId } = useParams();
   const { pathname } = useLocation();
   const [empty, kanbas, coursesPath, id, screen] = pathname.split("/");
-  const course = courses.find((course) => course._id === courseId);
+  const URL = "http://localhost:4000/api/courses";
+  const [course, setCourse] = useState({});
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(
+      `${URL}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
 
   return (
 

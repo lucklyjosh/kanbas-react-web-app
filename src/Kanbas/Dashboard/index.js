@@ -4,7 +4,7 @@ import db from "../Database";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Dashboard(
-    { courses, course, setCourse, addNewCourse,
+    { courses, course, setCourse, addCourse,
         deleteCourse, updateCourse }
       
 ) {
@@ -45,7 +45,7 @@ function Dashboard(
                     onChange={(e) => setCourse({ ...course, endDate: e.target.value })}
                 />
             </div>
-            <button className="btn btn-primary" onClick={addNewCourse}>
+            <button className="btn btn-primary" onClick={addCourse}>
                 {course._id != null ? 'Update' : 'Add'}
             </button>
 
