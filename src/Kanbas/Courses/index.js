@@ -24,6 +24,7 @@ function Courses() {
     );
     setCourse(response.data);
   };
+  
   useEffect(() => {
     findCourseById(courseId);
   }, [courseId]);

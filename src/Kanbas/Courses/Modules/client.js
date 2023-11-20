@@ -3,6 +3,8 @@ const COURSES_URL = "https://kanbas-node-server-app-n6ef.onrender.com/api/course
 // const MODULES_URL = "https://kanbas-node-server-app-n6ef.onrender.com/api/modules";
 const API_BASE = process.env.REACT_APP_API_BASE;
 const MODULES_URL = `${API_BASE}/modules`;
+
+
 export const deleteModule = async (moduleId) => {
   const response = await axios
     .delete(`${MODULES_URL}/${moduleId}`);

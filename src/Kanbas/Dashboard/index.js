@@ -4,9 +4,11 @@ import db from "../Database";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Dashboard(
-    { courses, course, setCourse, addCourse,
+    { courses, course, setCourse, addNewCourse,
         deleteCourse, updateCourse }
-      
+    
+        
+
 ) {
     return (
         <div className="container mt-4">
@@ -14,6 +16,7 @@ function Dashboard(
             <div className="mb-3">
                 <label className="form-label">Course Name</label>
                 <input
+                    type="text"
                     value={course.name}
                     className="form-control"
                     onChange={(e) => setCourse({ ...course, name: e.target.value })}
@@ -45,9 +48,18 @@ function Dashboard(
                     onChange={(e) => setCourse({ ...course, endDate: e.target.value })}
                 />
             </div>
-            <button className="btn btn-primary" onClick={addCourse}>
+            {/* <button className="btn btn-primary" onClick={addCourse}>
                 {course._id != null ? 'Update' : 'Add'}
+            </button> */}
+
+            <button className="btn btn-primary" onClick={addNewCourse} >
+                Add
             </button>
+
+            <button className="btn btn-primary" onClick={updateCourse} >
+                Update
+            </button>
+
 
             <div className="list-group mt-4">
                 {courses.map((course) => (
