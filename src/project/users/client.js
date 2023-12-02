@@ -2,10 +2,12 @@ import axios from "axios";
 const request = axios.create({
   withCredentials: true,
 });
+
 axios.defaults.withCredentials = true;
-export const BASE_API = 'https://kanbas-node-server-app-a6-x68s.onrender.com';
+
+export const BASE_API = process.env.REACT_APP_BASE_API_URL;
 export const USERS_API = `${BASE_API}/api/users`;
-axios.get('https://kanbas-node-server-app-a6-x68s.onrender.com/api/users')
+axios.get(USERS_API)
   .then(response => {
     console.log('Response:', response);
     // other response handling code
