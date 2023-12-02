@@ -2,12 +2,10 @@ import axios from "axios";
 const request = axios.create({
   withCredentials: true,
 });
-
-
-export const BASE_API = process.env.REACT_APP_BASE_API_URL;
+axios.defaults.withCredentials = true;
+export const BASE_API = 'https://kanbas-node-server-app-a6-x68s.onrender.com';
 export const USERS_API = `${BASE_API}/api/users`;
-
-axios.get('http://localhost:4000/api/users')
+axios.get('https://kanbas-node-server-app-a6-x68s.onrender.com/api/users')
   .then(response => {
     console.log('Response:', response);
     // other response handling code
@@ -16,7 +14,6 @@ axios.get('http://localhost:4000/api/users')
     console.error('Error:', error);
     // error handling code
   });
-
 export const signin = async (user) => {
   const response = await request.post(`${USERS_API}/signin`, user);
   return response.data;

@@ -5,15 +5,28 @@ function Signin() {
   const [error, setError] = useState("");
   const [user, setUser] = useState({ username: "", password: "" });
   const navigate = useNavigate();
+
+  // const signin = async () => {
+  //   try {
+  //     await client.signin(user);
+  //     navigate("/project/account");
+  //   } catch (err) {
+  //     setError(err.response.data.message);
+  //   }
+  // };
   const signin = async () => {
     try {
       await client.signin(user);
       navigate("/project/account");
     } catch (err) {
-      setError(err.response.data.message);
+      if (err.response && err.response.data) {
+        setError(err.response.data.message);
+      } else {
+        setError("An error occurred. Please try again.");
+      }
     }
   };
-
+  
   return (
     <div className="w-50">
       <h1>Signin</h1>
