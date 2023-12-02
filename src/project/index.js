@@ -10,8 +10,8 @@ import Details from "./details";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Nav from "./nav";
 import UserTable from "./users/table";
-import CourseList from "./courses/list";
-import CourseDetails from "./courses/details";
+// import CourseList from "./courses/list";
+// import CourseDetails from "./courses/details";
 
 function Project() {
   return (
@@ -30,8 +30,8 @@ function Project() {
             <Route path="/home" element={<Home />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/signin" element={<Signin />} />
-            <Route path="/courses" element={<CourseList />} />
-            <Route path="/courses/:cid" element={<CourseDetails />} />
+            {/* <Route path="/courses" element={<CourseList />} />
+            <Route path="/courses/:cid" element={<CourseDetails />} /> */}
             <Route path="/search" element={<Search />} />
             <Route path="/search/:search" element={<Search />} />
             <Route path="/details/:id" element={<Details />} />
