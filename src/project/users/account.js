@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 
 function Account() {
+    
     const [account, setAccount] = useState(null);
     const navigate = useNavigate();
     const [user, setUser] = useState({ username: "", password: "" });
